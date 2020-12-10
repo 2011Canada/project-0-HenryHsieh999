@@ -7,8 +7,6 @@ import com.revature.models.Displayable;
 
 public class CustomerBankMenu implements Displayable{
 	
-	CustomerBankMenu cbm;
-	
 	List<Displayable> lines;
 	
 	Scanner userIn;

@@ -2,9 +2,10 @@ package com.revature.services;
 
 import java.util.List;
 
+import com.revature.models.Bank;
 import com.revature.models.Customer;
 
-public class CustomerServiceImplementation implements CustomerService{
+public class CustomerServiceImplementation extends GeneralBankServiceImplementation implements CustomerService{
 
 	public List<Customer> seeAllAccounts() {
 		// TODO Auto-generated method stub
@@ -41,6 +42,21 @@ public class CustomerServiceImplementation implements CustomerService{
 		if(am < 0) {
 			System.out.println("Cannot accept negative money!!!");
 		}		
+	}
+
+	public Bank login(String username, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void logout() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Boolean newCustomerAccount(String username, String password) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 

@@ -4,7 +4,8 @@ import java.util.List;
 
 import com.revature.models.Customer;
 
-public interface CustomerService {
+public interface CustomerService extends GeneralBankServiceInterface{
+	
 	
 	//Customer can see all accounts currently owned
 	public List<Customer> seeAllAccounts();
