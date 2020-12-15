@@ -3,21 +3,15 @@ package com.revature.models;
 public class User{
 	
 	private int userId;
-	
-	private String username;
-	
-	private String password;
-	
-	private String firstName;
-	
-	private String lastName;
-	
-	private String tpe;
-
+	private int accountId;
 	private double balance;
+	private String username;
+	private String password;
+	private String firstName;
+	private String lastName;
+	private String tpe;
+	private String userAccountStatus;
 	
-	private boolean status;
-
 	public User() {
 		super();
 	}
@@ -28,9 +22,9 @@ public class User{
 		this.balance = balance;
 		this.userId = userId;
 	}
-	public User(double balance, boolean status, int id) {
+	public User(double balance, String userAccountStatus, int id) {
 		this.balance = balance;
-		this.status = status;
+		this.userAccountStatus = userAccountStatus;
 		this.userId = id;
 	}
 	public User(String username, String password, String fName, String lName) {
@@ -39,19 +33,18 @@ public class User{
 		this.firstName = fName;
 		this.lastName = lName;
 	}
-	public User(String username, String password, String fName, String lName, boolean status) {
+	public User(String username, String password, String fName, String lName, String userAccountStatus) {
 		this.username = username;
 		this.password = password;
 		this.firstName = fName;
 		this.lastName = lName;
-		this.status = status;
+		this.userAccountStatus = userAccountStatus;
 	}
-	public User(int userId, String username, String firstName, String lastName, boolean status, String tpe) {
+	public User(int userId, String username, String firstName, String lastName, String userAccountStatus, String tpe) {
 		this.userId = userId;
 		this.username = username;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.status = status;
 		this.tpe = tpe;
 	}
 	public User(int userId, String username, String password, String firstName, String lastName) {
@@ -62,17 +55,31 @@ public class User{
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
-	public User(int userId, String username, String password, String firstName, String lastName,boolean status, String tpe) {
+	public User(int userId, String username, String password, String firstName, String lastName,String userAccountStatus, String tpe) {
 		super();
 		this.userId = userId;
 		this.username = username;
 		this.password = password;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.status = status;
+		this.userAccountStatus = userAccountStatus;
 		this.tpe = tpe;
 	}
 	
+	public User(String userAccountStatus) {
+		super();
+		this.userAccountStatus = userAccountStatus;
+	}
+	public User(int id, int accountId, String firstName, String lastName, String user_status, Double balance, String tpe) {
+		super();
+		this.userId = id;
+		this.accountId = accountId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userAccountStatus = user_status;
+		this.balance = balance;
+		this.tpe = tpe;
+	}
 	
 	public int getUserId() {
 		return userId;
@@ -82,6 +89,13 @@ public class User{
 		this.userId = userId;
 	}
 	
+	public int getAccountId() {
+		return accountId;
+	}
+	
+	public void setAccountId(int accountId) {
+		this.accountId = accountId;
+	}
 	public void setBalance(double balance) {
 		this.balance = balance;
 	}
@@ -122,12 +136,12 @@ public class User{
 		this.lastName = lastName;
 	}
 	
-	public void setStatus(Boolean status) {
-		this.status = status;
+	public void setUserAccountStatus(String userAccountStatus) {
+		this.userAccountStatus = userAccountStatus;
 	}
 	
-	public Boolean getStatus(Boolean status) {
-		return status;
+	public String getUserAccountStatus() {
+		return userAccountStatus;
 	}
 	
 	public void setTpe(String tpe) {
@@ -139,9 +153,11 @@ public class User{
 	}
 	@Override
 	public String toString() {
-		return "User [userId=" + userId + ", username=" + username + ", password=" + password + ", firstName="
-				+ firstName + ", lastName=" + lastName + ", tpe=" + tpe + ", balance=" + balance + ", status=" + status
-				+ "]";
-	}	
+		return "userId=" + userId + ", accountId=" + accountId + ", balance=" + balance + ", username=" + username
+				+ ", password=" + password + ", firstName=" + firstName + ", lastName=" + lastName + ", tpe=" + tpe
+				+ ", userAccountStatus=" + userAccountStatus + "\n";
+	}
+
+
 	
 }

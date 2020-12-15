@@ -11,4 +11,6 @@ public interface EmployeeServiceInterface {
 	public void approveCustomerBankAccountStatus(int id);
 	public void rejectCustomerBankAccountStatus(int id);
 	public List<User> findAllCustomer();
+	public List<User> findAllLockedUserAccounts();
+	public List<User> findAllBankAccountsUnderSameOwner(int id);
 }

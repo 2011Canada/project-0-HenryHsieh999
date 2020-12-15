@@ -1,1 +1,177 @@
 2020-12-15 01:31:24 e720 [INFO] Server has started!
+2020-12-15 08:23:56 e720 [INFO] Server has started!
+2020-12-15 08:27:29 e720 [INFO] null null  Deposited: $
+2020-12-15 08:29:07 e720 [INFO] null null  Deposited: $
+2020-12-15 08:29:22 e720 [INFO] null null  Deposited: $
+2020-12-15 08:38:55 e720 [INFO] null null  Deposited: $
+2020-12-15 08:39:09 e720 [INFO] Server has started!
+2020-12-15 08:40:09 e720 [INFO] Server has started!
+2020-12-15 08:40:17 e720 [INFO] Server has started!
+2020-12-15 08:40:27 e720 [INFO] Server has started!
+2020-12-15 08:41:24 e720 [INFO] Server has started!
+2020-12-15 08:43:33 e720 [INFO] Server has started!
+2020-12-15 08:44:06 e720 [INFO] Server has started!
+2020-12-15 08:44:52 e720 [INFO] Server has started!
+2020-12-15 09:12:00 e720 [INFO] Server has started!
+2020-12-15 09:14:27 e720 [INFO] Server has started!
+2020-12-15 09:35:10 e720 [INFO] Server has started!
+2020-12-15 09:36:35 e720 [INFO] Server has started!
+2020-12-15 09:37:00 e720 [INFO] Server has started!
+2020-12-15 09:38:26 e720 [INFO] Server has started!
+2020-12-15 09:38:55 e720 [INFO] Server has started!
+2020-12-15 09:39:40 e720 [INFO] Server has started!
+2020-12-15 09:42:30 e720 [INFO] Server has started!
+2020-12-15 09:43:33 e720 [INFO] Server has started!
+2020-12-15 09:45:44 e720 [INFO] Server has started!
+2020-12-15 09:48:58 e720 [INFO] Server has started!
+2020-12-15 09:51:19 e720 [INFO] Server has started!
+2020-12-15 10:00:27 e720 [INFO] Server has started!
+2020-12-15 10:01:31 e720 [INFO] Server has started!
+2020-12-15 10:03:06 e720 [INFO] Server has started!
+2020-12-15 10:04:15 e720 [INFO] Server has started!
+2020-12-15 10:05:13 e720 [INFO] Server has started!
+2020-12-15 10:10:18 e720 [INFO] Server has started!
+2020-12-15 10:13:05 e720 [INFO] Server has started!
+2020-12-15 10:15:09 e720 [INFO] [User [userId=2, username=null, password=null, firstName=null, lastName=null, tpe=null, balance=0.0, status=false], User [userId=3, username=null, password=null, firstName=null, lastName=null, tpe=null, balance=0.0, status=false], User [userId=4, username=null, password=null, firstName=null, lastName=null, tpe=null, balance=0.0, status=false]]
+2020-12-15 10:16:59 e720 [INFO] Server has started!
+2020-12-15 10:17:09 e720 [INFO] [User [userId=2, username=null, password=null, firstName=null, lastName=null, tpe=null, balance=0.0, status=false]
+, User [userId=3, username=null, password=null, firstName=null, lastName=null, tpe=null, balance=0.0, status=false]
+, User [userId=4, username=null, password=null, firstName=null, lastName=null, tpe=null, balance=0.0, status=false]
+]
+2020-12-15 11:13:27 e720 [INFO] Server has started!
+2020-12-15 11:15:16 e720 [INFO] Server has started!
+2020-12-15 11:25:37 e720 [INFO] [User [userId=2, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null, bankAccountStatus=null, balance=0.0], User [userId=3, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null, bankAccountStatus=null, balance=0.0], User [userId=4, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null, bankAccountStatus=null, balance=0.0], User [userId=5, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null, bankAccountStatus=null, balance=0.0]]
+2020-12-15 11:26:05 e720 [INFO] [User [userId=2, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null, balance=0.0]
+, User [userId=3, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null, balance=0.0]
+, User [userId=4, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null, balance=0.0]
+, User [userId=5, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null, balance=0.0]
+]
+2020-12-15 11:37:03 e720 [INFO] Server has started!
+2020-12-15 11:49:45 e720 [INFO] Server has started!
+2020-12-15 11:52:37 e720 [INFO] Server has started!
+2020-12-15 11:53:40 e720 [INFO] Server has started!
+2020-12-15 11:54:04 e720 [INFO] Server has started!
+2020-12-15 12:01:44 e720 [INFO] Server has started!
+2020-12-15 12:03:34 e720 [INFO] [User [userId=2, username=null, password=null, firstName=null, lastName=null, tpe=null, User Account Status=null, balance=0.0]
+, User [userId=3, username=null, password=null, firstName=null, lastName=null, tpe=null, User Account Status=null, balance=0.0]
+, User [userId=4, username=null, password=null, firstName=null, lastName=null, tpe=null, User Account Status=null, balance=0.0]
+, User [userId=5, username=null, password=null, firstName=null, lastName=null, tpe=null, User Account Status=null, balance=0.0]
+, User [userId=6, username=null, password=null, firstName=null, lastName=null, tpe=null, User Account Status=null, balance=0.0]
+]
+2020-12-15 12:13:27 e720 [INFO] Server has started!
+2020-12-15 12:13:55 e720 [INFO] [User [userId=2, username=aaaa, password=aa, firstName=aaa, lastName=active, tpe=null, User Account Status=null, balance=0.0]
+, User [userId=3, username=bbbb, password=bb, firstName=bbb, lastName=active, tpe=null, User Account Status=null, balance=0.0]
+, User [userId=4, username=cccc, password=cc, firstName=ccc, lastName=active, tpe=null, User Account Status=null, balance=0.0]
+, User [userId=5, username=masteruser, password=henry, firstName=hsieh, lastName=inactive, tpe=null, User Account Status=null, balance=0.0]
+, User [userId=6, username=qwerty, password=keyboard, firstName=warrior, lastName=active, tpe=null, User Account Status=null, balance=0.0]
+]
+2020-12-15 12:16:39 e720 [INFO] [User [userId=2, username=aaaa, firstName=aaa, lastName=active, User Account Status=null, tpe=null, balance=0.0]
+, User [userId=3, username=bbbb, firstName=bbb, lastName=active, User Account Status=null, tpe=null, balance=0.0]
+, User [userId=4, username=cccc, firstName=ccc, lastName=active, User Account Status=null, tpe=null, balance=0.0]
+, User [userId=5, username=masteruser, firstName=hsieh, lastName=inactive, User Account Status=null, tpe=null, balance=0.0]
+, User [userId=6, username=qwerty, firstName=warrior, lastName=active, User Account Status=null, tpe=null, balance=0.0]
+]
+2020-12-15 12:23:52 e720 [DEBUG] Error has occured when trying to findallcustomer
+2020-12-15 12:23:52 e720 [INFO] []
+2020-12-15 12:24:05 e720 [INFO] [Users[User ID=2, Username=null, firstName=aa, lastName=aaa, User Account Status=active, tpe=null, balance=223.12]
+, Users[User ID=3, Username=null, firstName=bb, lastName=bbb, User Account Status=active, tpe=null, balance=221.44]
+, Users[User ID=4, Username=null, firstName=cc, lastName=ccc, User Account Status=active, tpe=null, balance=10.0]
+, Users[User ID=5, Username=null, firstName=henry, lastName=hsieh, User Account Status=inactive, tpe=null, balance=0.0]
+, Users[User ID=6, Username=null, firstName=keyboard, lastName=warrior, User Account Status=active, tpe=null, balance=0.0]
+]
+2020-12-15 12:24:52 e720 [INFO] [[User ID=2, Username=null, firstName=aa, lastName=aaa, User Account Status=active, tpe=null, balance=223.12]
+, [User ID=3, Username=null, firstName=bb, lastName=bbb, User Account Status=active, tpe=null, balance=221.44]
+, [User ID=4, Username=null, firstName=cc, lastName=ccc, User Account Status=active, tpe=null, balance=10.0]
+, [User ID=5, Username=null, firstName=henry, lastName=hsieh, User Account Status=inactive, tpe=null, balance=0.0]
+, [User ID=6, Username=null, firstName=keyboard, lastName=warrior, User Account Status=active, tpe=null, balance=0.0]
+]
+2020-12-15 12:25:08 e720 [INFO] [User ID=2, Username=null, firstName=aa, lastName=aaa, User Account Status=active, tpe=null, balance=223.12
+, User ID=3, Username=null, firstName=bb, lastName=bbb, User Account Status=active, tpe=null, balance=221.44
+, User ID=4, Username=null, firstName=cc, lastName=ccc, User Account Status=active, tpe=null, balance=10.0
+, User ID=5, Username=null, firstName=henry, lastName=hsieh, User Account Status=inactive, tpe=null, balance=0.0
+, User ID=6, Username=null, firstName=keyboard, lastName=warrior, User Account Status=active, tpe=null, balance=0.0
+]
+2020-12-15 12:25:35 e720 [INFO] [User ID=2
+, Username=null, firstName=aa, lastName=aaa, User Account Status=active, tpe=null, balance=223.12
+, User ID=3
+, Username=null, firstName=bb, lastName=bbb, User Account Status=active, tpe=null, balance=221.44
+, User ID=4
+, Username=null, firstName=cc, lastName=ccc, User Account Status=active, tpe=null, balance=10.0
+, User ID=5
+, Username=null, firstName=henry, lastName=hsieh, User Account Status=inactive, tpe=null, balance=0.0
+, User ID=6
+, Username=null, firstName=keyboard, lastName=warrior, User Account Status=active, tpe=null, balance=0.0
+]
+2020-12-15 12:25:48 e720 [INFO] [User ID=2, Username=null, firstName=aa, lastName=aaa, User Account Status=active, tpe=null, balance=223.12
+, User ID=3, Username=null, firstName=bb, lastName=bbb, User Account Status=active, tpe=null, balance=221.44
+, User ID=4, Username=null, firstName=cc, lastName=ccc, User Account Status=active, tpe=null, balance=10.0
+, User ID=5, Username=null, firstName=henry, lastName=hsieh, User Account Status=inactive, tpe=null, balance=0.0
+, User ID=6, Username=null, firstName=keyboard, lastName=warrior, User Account Status=active, tpe=null, balance=0.0
+]
+2020-12-15 12:29:53 e720 [INFO] [User ID=2, Username=null, firstName=aa, lastName=aaa, User Account Status=active, tpe=null, balance=223.12
+, User ID=3, Username=null, firstName=bb, lastName=bbb, User Account Status=active, tpe=null, balance=221.44
+, User ID=4, Username=null, firstName=cc, lastName=ccc, User Account Status=active, tpe=null, balance=10.0
+, User ID=5, Username=null, firstName=henry, lastName=hsieh, User Account Status=inactive, tpe=null, balance=0.0
+, User ID=6, Username=null, firstName=keyboard, lastName=warrior, User Account Status=active, tpe=null, balance=0.0
+]
+2020-12-15 12:30:06 e720 [INFO] [User ID=2, Username=null, firstName=aa, lastName=aaa, User Account Status=active, tpe=null, balance=223.12
+, User ID=3, Username=null, firstName=bb, lastName=bbb, User Account Status=active, tpe=null, balance=221.44
+, User ID=4, Username=null, firstName=cc, lastName=ccc, User Account Status=active, tpe=null, balance=10.0
+, User ID=5, Username=null, firstName=henry, lastName=hsieh, User Account Status=inactive, tpe=null, balance=0.0
+, User ID=6, Username=null, firstName=keyboard, lastName=warrior, User Account Status=active, tpe=null, balance=0.0
+, User ID=7, Username=null, firstName=henry, lastName=hsieh, User Account Status=inactive, tpe=null, balance=0.0
+]
+2020-12-15 12:57:23 e720 [INFO] [User ID=2, Username=null, firstName=aa, lastName=aaa, User Account Status=active, tpe=null, balance=223.12
+, User ID=3, Username=null, firstName=bb, lastName=bbb, User Account Status=active, tpe=null, balance=221.44
+, User ID=4, Username=null, firstName=cc, lastName=ccc, User Account Status=active, tpe=null, balance=10.0
+, User ID=5, Username=null, firstName=dd, lastName=ddd, User Account Status=active, tpe=null, balance=0.0
+, User ID=6, Username=null, firstName=henry, lastName=hsieh, User Account Status=inactive, tpe=null, balance=500.42
+, User ID=5, Username=null, firstName=dd, lastName=ddd, User Account Status=active, tpe=null, balance=500.42
+, User ID=6, Username=null, firstName=henry, lastName=hsieh, User Account Status=inactive, tpe=null, balance=0.0
+]
+2020-12-15 13:02:14 e720 [INFO] [User ID=6, Username=null, firstName=henry, lastName=hsieh, User Account Status=inactive, tpe=null, balance=500.42
+, User ID=6, Username=null, firstName=henry, lastName=hsieh, User Account Status=inactive, tpe=null, balance=0.0
+]
+2020-12-15 13:04:39 e720 [INFO] [User ID=6, Username=null, firstName=henry, lastName=hsieh, User Account Status=inactive, tpe=null, balance=500.42
+, User ID=6, Username=null, firstName=henry, lastName=hsieh, User Account Status=inactive, tpe=null, balance=0.0
+]
+2020-12-15 13:21:29 e720 [INFO] Server has started!
+2020-12-15 13:21:57 e720 [INFO] [User ID=2, Username=null, firstName=aa, lastName=aaa, User Account Status=active, tpe=null, balance=223.12
+, User ID=3, Username=null, firstName=bb, lastName=bbb, User Account Status=active, tpe=null, balance=221.44
+, User ID=4, Username=null, firstName=cc, lastName=ccc, User Account Status=active, tpe=null, balance=10.0
+, User ID=5, Username=null, firstName=dd, lastName=ddd, User Account Status=active, tpe=null, balance=0.0
+, User ID=6, Username=null, firstName=henry, lastName=hsieh, User Account Status=inactive, tpe=null, balance=0.0
+, User ID=7, Username=null, firstName=keyboard, lastName=warrior, User Account Status=inactive, tpe=null, balance=0.0
+]
+2020-12-15 13:22:43 e720 [INFO] [User ID=2, Username=null, firstName=aa, lastName=aaa, User Account Status=active, tpe=null, balance=223.12
+, User ID=3, Username=null, firstName=bb, lastName=bbb, User Account Status=active, tpe=null, balance=221.44
+, User ID=4, Username=null, firstName=cc, lastName=ccc, User Account Status=active, tpe=null, balance=10.0
+, User ID=5, Username=null, firstName=dd, lastName=ddd, User Account Status=active, tpe=null, balance=0.0
+, User ID=6, Username=null, firstName=henry, lastName=hsieh, User Account Status=inactive, tpe=null, balance=0.0
+, User ID=7, Username=null, firstName=keyboard, lastName=warrior, User Account Status=active, tpe=null, balance=0.0
+]
+2020-12-15 13:29:09 e720 [INFO] [User ID=6, Username=null, firstName=henry, lastName=hsieh, User Account Status=inactive, tpe=null, balance=0.0
+]
+2020-12-15 13:36:41 e720 [INFO] [User [userId=2, accountId=0, balance=223.12, username=null, password=null, firstName=aa, lastName=aaa, tpe=null, userAccountStatus=active], User [userId=3, accountId=0, balance=221.44, username=null, password=null, firstName=bb, lastName=bbb, tpe=null, userAccountStatus=active], User [userId=4, accountId=0, balance=10.0, username=null, password=null, firstName=cc, lastName=ccc, tpe=null, userAccountStatus=active], User [userId=5, accountId=0, balance=0.0, username=null, password=null, firstName=dd, lastName=ddd, tpe=null, userAccountStatus=active], User [userId=6, accountId=0, balance=0.0, username=null, password=null, firstName=henry, lastName=hsieh, tpe=null, userAccountStatus=inactive], User [userId=7, accountId=0, balance=0.0, username=null, password=null, firstName=keyboard, lastName=warrior, tpe=null, userAccountStatus=active]]
+2020-12-15 13:36:58 e720 [INFO] [userId=2, accountId=0, balance=223.12, username=null, password=null, firstName=aa, lastName=aaa, tpe=null, userAccountStatus=active
+, userId=3, accountId=0, balance=221.44, username=null, password=null, firstName=bb, lastName=bbb, tpe=null, userAccountStatus=active
+, userId=4, accountId=0, balance=10.0, username=null, password=null, firstName=cc, lastName=ccc, tpe=null, userAccountStatus=active
+, userId=5, accountId=0, balance=0.0, username=null, password=null, firstName=dd, lastName=ddd, tpe=null, userAccountStatus=active
+, userId=6, accountId=0, balance=0.0, username=null, password=null, firstName=henry, lastName=hsieh, tpe=null, userAccountStatus=inactive
+, userId=7, accountId=0, balance=0.0, username=null, password=null, firstName=keyboard, lastName=warrior, tpe=null, userAccountStatus=active
+]
+2020-12-15 13:38:30 e720 [INFO] Server has started!
+2020-12-15 13:38:57 e720 [INFO] [userId=2, accountId=0, balance=223.12, username=null, password=null, firstName=aa, lastName=aaa, tpe=null, userAccountStatus=active
+, userId=3, accountId=0, balance=221.44, username=null, password=null, firstName=bb, lastName=bbb, tpe=null, userAccountStatus=active
+, userId=4, accountId=0, balance=10.0, username=null, password=null, firstName=cc, lastName=ccc, tpe=null, userAccountStatus=active
+, userId=5, accountId=0, balance=0.0, username=null, password=null, firstName=dd, lastName=ddd, tpe=null, userAccountStatus=active
+, userId=6, accountId=0, balance=0.0, username=null, password=null, firstName=henry, lastName=hsieh, tpe=null, userAccountStatus=inactive
+, userId=7, accountId=0, balance=0.0, username=null, password=null, firstName=keyboard, lastName=warrior, tpe=null, userAccountStatus=active
+]
+2020-12-15 13:47:26 e720 [INFO] [userId=2, accountId=2, balance=223.12, username=null, password=null, firstName=aa, lastName=aaa, tpe=customer, userAccountStatus=active
+, userId=3, accountId=3, balance=221.44, username=null, password=null, firstName=bb, lastName=bbb, tpe=customer, userAccountStatus=active
+, userId=4, accountId=4, balance=10.0, username=null, password=null, firstName=cc, lastName=ccc, tpe=customer, userAccountStatus=active
+, userId=5, accountId=5, balance=0.0, username=null, password=null, firstName=dd, lastName=ddd, tpe=customer, userAccountStatus=active
+, userId=6, accountId=14, balance=0.0, username=null, password=null, firstName=henry, lastName=hsieh, tpe=customer, userAccountStatus=inactive
+, userId=7, accountId=15, balance=0.0, username=null, password=null, firstName=keyboard, lastName=warrior, tpe=customer, userAccountStatus=active
+]

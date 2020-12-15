@@ -8,9 +8,15 @@ import com.revature.repositories.UserPostgresDAO;
 public class CustomerServiceDebugger {
 	public static void main(String[] args) throws UserNotFoundException {
 		UserDAO ud = new UserPostgresDAO();
-		User u = new User(355.01,1);
+//		User u = new User();
+		User u = new User(0,6);
 		CustomerServicesImplementation csi = new CustomerServicesImplementation(ud);
-//		csi.withdraw(u, 3.42);
-		csi.deposit(u);
+//		System.out.println(csi.deposit(u));
+//		System.out.println(csi.chkUserAccountStatus(6));
+//		csi.deposit(u);
+//		System.out.println(csi.findUserIdByUsername("bbbb").getUserId());
+//		System.out.println(csi.viewBalance(1).getBalance());
+//		System.out.println(csi.chkUserAccountType(1));
+		System.out.println(csi.newDefaultBankAccount(u));
 	}
 }

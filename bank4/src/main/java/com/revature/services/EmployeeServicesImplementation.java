@@ -21,7 +21,7 @@ public class EmployeeServicesImplementation implements EmployeeServiceInterface{
 	public User findAccount(int id) {
 		return ud.findUserByUserId(id);
 	}
-
+	
 	
 	public void approveCustomerBankAccountStatus(int id) {
 		ud.approveCustomerBankAccount(id);		
@@ -36,4 +36,13 @@ public class EmployeeServicesImplementation implements EmployeeServiceInterface{
 	public List<User> findAllCustomer() {
 		return ud.findAllCustomer();
 	}
+
+	public List<User> findAllLockedUserAccounts() {
+		return ud.findAllLockedUserAccounts();
+	}
+
+	public List<User> findAllBankAccountsUnderSameOwner(int id) {
+		return ud.findAllBankAccountsUnderSameOwner(id);
+	}
+
 }
