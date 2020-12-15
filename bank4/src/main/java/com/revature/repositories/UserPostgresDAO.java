@@ -366,8 +366,96 @@ public class UserPostgresDAO implements UserDAO{
 		return u;
 	
 	}
-	public User acceptMoneyTransfer() {
-		// TODO Auto-generated method stub
+	public User acceptMoneyTransfer(int userId) {
+		Connection conn = cf.getConnection();
+		try {
+			String sql = "update account as a set balance = a.balance + mt.balance from money_transfer as mt where a.account_id = mt.receiver_account_id;";
+			PreparedStatement updateBankAccountBalance = conn.prepareStatement(sql);
+			updateBankAccountBalance.executeUpdate();
+		} catch(SQLException e) {
+			e.printStackTrace();
+		} finally {
+			cf.releaseConnection(conn);
+		}
+		return null;
+	}
+	
+	public User deleteMoneyTransfer(int transferId) {
+		Connection conn = cf.getConnection();
+		try {
+			String sql = "delete from money_transfer where transfer_id = ?;";
+			PreparedStatement deleteMoneyTransfer = conn.prepareStatement(sql);
+			deleteMoneyTransfer.setInt(1, transferId);
+			deleteMoneyTransfer.executeUpdate();
+		} catch(SQLException e) {
+			e.printStackTrace();
+		} finally {
+			cf.releaseConnection(conn);
+		}
+		return null;
+	}
+
+	public List<User> viewAllIncomingMoneyTranfers(int userId) {
+		Connection conn = cf.getConnection();
+		List<User> u = new ArrayList<User>();
+		try {
+			String sql = "select * from money_transfer where receiver_account_id = ?;";
+			PreparedStatement viewAllIncomingMoneyTranfers = conn.prepareStatement(sql);
+			viewAllIncomingMoneyTranfers.setInt(1, userId);
+			ResultSet res = viewAllIncomingMoneyTranfers.executeQuery();
+			while(res.next()) {
+				Customer c = new Customer(res.getInt("receiver_account_id"), res.getDouble("balance"), res.getInt("sender_account_id"), res.getString("money_transfer_status"), res.getInt("transfer_id"));
+				u.add(c);
+			}
+		}catch(SQLException e) {
+			HardBankLauncher.e720Logger.debug("Error has occured when trying to View All Incoming Money Transfers in UserPostgresDAO");
+			e.printStackTrace();
+		} finally {
+			cf.releaseConnection(conn);
+		}
+		HardBankLauncher.e720Logger.info(u);
+		return u;
+	}
+	
+	public List<User> viewAllOutgoingMoneyTransfers(int userId) {
+		Connection conn = cf.getConnection();
+		List<User> u = new ArrayList<User>();
+		try {
+			String sql = "select * from money_transfer where sender_account_id = ?;";
+			PreparedStatement viewAllOutgoingMoneyTransfers = conn.prepareStatement(sql);
+			viewAllOutgoingMoneyTransfers.setInt(1, userId);
+			ResultSet res = viewAllOutgoingMoneyTransfers.executeQuery();
+			while(res.next()) {
+				Customer c = new Customer(res.getInt("receiver_account_id"), res.getDouble("balance"), res.getInt("sender_account_id"), res.getString("money_transfer_status"), res.getInt("transfer_id"));
+				u.add(c);
+			}
+		}catch(SQLException e) {
+			HardBankLauncher.e720Logger.debug("Error has occured when trying to View All Outgoing Money Transfers in UserPostgresDAO");
+			e.printStackTrace();
+		} finally {
+			cf.releaseConnection(conn);
+		}
+		HardBankLauncher.e720Logger.info(u);
+		return u;
+	}
+	public User getMoneyTransferID(int userId) {
+		Connection conn = cf.getConnection();
+		try {
+			String sql = "select * from users u left join money_transfer mt on u.user_id = mt.receiver_account_id where receiver_account_id = 1;";
+			PreparedStatement getBalance = conn.prepareStatement(sql);
+			getBalance.setInt(1, userId);
+			ResultSet res = getBalance.executeQuery();
+			while(res.next()) {
+				User u = new User();
+				u.setUserId(res.getInt("account_id"));
+				u.setBalance(res.getDouble("balance"));
+				return u;
+			}
+		} catch(SQLException e) {
+			e.printStackTrace();
+		} finally {
+			cf.releaseConnection(conn);
+		}
 		return null;
 	}
 

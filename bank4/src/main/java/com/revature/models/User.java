@@ -8,6 +8,7 @@ public class User{
 	private int receiverAccountID;
 	private int senderAccountID;
 	private double tempMoneyTransfer;
+	private int transferID;
 	private String transferState;
 	private String username;
 	private String password;
@@ -98,6 +99,14 @@ public class User{
 		this.tempMoneyTransfer = tempMoneyTransfer;
 		this.senderAccountID = senderAccountID;
 	}
+	public User(int receiver_account_id, double tempMoneyTransfer, int sender_account_id, String money_transfer_status,int transfer_id) {
+		super();
+		this.receiverAccountID = receiver_account_id;
+		this.tempMoneyTransfer = tempMoneyTransfer;
+		this.senderAccountID = sender_account_id;
+		this.transferState = money_transfer_status;
+		this.transferID = transfer_id;
+	}
 	public int getUserId() {
 		return userId;
 	}
@@ -184,16 +193,28 @@ public class User{
 	public String getTpe() {
 		return tpe;
 	}
+	public void setTransferID(String transferID) {
+		this.tpe = transferID;
+	}
+	
+	public int getTransferID() {
+		return transferID;
+	}
+	public void setTransferState(String transferState) {
+		this.transferState = transferState;
+	}
+	
+	public String getTransferState() {
+		return transferState;
+	}
 	@Override
 	public String toString() {
 		return "User [userId=" + userId + ", accountId=" + accountId + ", balance=" + balance + ", receiverAccountID="
-				+ receiverAccountID + ", senderAccountID=" + senderAccountID + ", transferState=" + transferState
-				+ ", username=" + username + ", password=" + password + ", firstName=" + firstName + ", lastName="
-				+ lastName + ", tpe=" + tpe + ", userAccountStatus=" + userAccountStatus + "]";
+				+ receiverAccountID + ", senderAccountID=" + senderAccountID + ", tempMoneyTransfer="
+				+ tempMoneyTransfer + ", transferID=" + transferID + ", transferState=" + transferState + ", username="
+				+ username + ", password=" + password + ", firstName=" + firstName + ", lastName=" + lastName + ", tpe="
+				+ tpe + ", userAccountStatus=" + userAccountStatus + "]";
 	}
-	
-	
-
 
 	
 }

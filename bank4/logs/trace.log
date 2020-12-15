@@ -181,3 +181,12 @@
 2020-12-15 15:53:55 e720 [INFO] [User [userId=3, accountId=3, balance=221.44, receiverAccountID=0, senderAccountID=0, transferState=null, username=null, password=null, firstName=bb, lastName=bbb, tpe=customer, userAccountStatus=active], User [userId=4, accountId=4, balance=10.0, receiverAccountID=0, senderAccountID=0, transferState=null, username=null, password=null, firstName=cc, lastName=ccc, tpe=customer, userAccountStatus=active], User [userId=5, accountId=5, balance=0.0, receiverAccountID=0, senderAccountID=0, transferState=null, username=null, password=null, firstName=dd, lastName=ddd, tpe=customer, userAccountStatus=active], User [userId=6, accountId=14, balance=0.0, receiverAccountID=0, senderAccountID=0, transferState=null, username=null, password=null, firstName=henry, lastName=hsieh, tpe=customer, userAccountStatus=inactive], User [userId=7, accountId=15, balance=0.0, receiverAccountID=0, senderAccountID=0, transferState=null, username=null, password=null, firstName=keyboard, lastName=warrior, tpe=customer, userAccountStatus=active], User [userId=2, accountId=2, balance=12564.12, receiverAccountID=0, senderAccountID=0, transferState=null, username=null, password=null, firstName=aa, lastName=aaa, tpe=customer, userAccountStatus=active]]
 2020-12-15 15:58:29 e720 [INFO] Server has started!
 2020-12-15 16:03:00 e720 [INFO] Server has started!
+2020-12-15 17:03:28 e720 [DEBUG] Error has occured when trying to View All Incoming Money Transfers in UserPostgresDAO
+2020-12-15 17:03:28 e720 [INFO] []
+2020-12-15 17:04:06 e720 [DEBUG] Error has occured when trying to View All Incoming Money Transfers in UserPostgresDAO
+2020-12-15 17:04:06 e720 [INFO] []
+2020-12-15 17:05:39 e720 [DEBUG] Error has occured when trying to View All Incoming Money Transfers in UserPostgresDAO
+2020-12-15 17:05:39 e720 [INFO] []
+2020-12-15 17:11:09 e720 [INFO] [User [userId=0, accountId=0, balance=0.0, receiverAccountID=1, senderAccountID=2, tempMoneyTransfer=24.41, transferID=4, transferState=pending, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null]]
+2020-12-15 17:13:19 e720 [INFO] []
+2020-12-15 17:13:35 e720 [INFO] [User [userId=0, accountId=0, balance=0.0, receiverAccountID=1, senderAccountID=2, tempMoneyTransfer=24.41, transferID=4, transferState=pending, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null]]

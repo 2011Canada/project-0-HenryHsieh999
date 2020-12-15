@@ -31,7 +31,14 @@ public interface UserDAO {
 
 	public User moneyTransferToAnotherAccount(User u);
 
-	public User acceptMoneyTransfer();
+	public User acceptMoneyTransfer(int userId);
+	//system auto delete money transfer after accepting
+	public User deleteMoneyTransfer(int transferId);
+	public User getMoneyTransferID(int userId);
+	
+	public List<User> viewAllIncomingMoneyTranfers(int userId);
+	public List<User> viewAllOutgoingMoneyTransfers(int userId);
+	
 	
 	//use bufferreader
 //	public User viewLog();

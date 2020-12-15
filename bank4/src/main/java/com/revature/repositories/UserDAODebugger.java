@@ -7,6 +7,7 @@ public class UserDAODebugger {
 	public static void main(String[] args) throws UserNotFoundException {
 		// TODO Auto-generated method stub
 		UserDAO ud = new UserPostgresDAO();
+		User u4 = new User();
 		User u1 = new User("masteruser1", "secret", "henry", "hsieh");
 		User u = new User(500.42, 5);
 		User u3 = new User(1, 24.41, 2, "pending");
@@ -28,6 +29,10 @@ public class UserDAODebugger {
 //		System.out.println(ud.findAllBankAccountsUnderSameOwner(6));
 //		System.out.println(ud.findAccountId(2));
 //		System.out.println(ud.checkUserAccountStatus(6));
-		System.out.println(ud.moneyTransferToAnotherAccount(u3));
+//		System.out.println(ud.moneyTransferToAnotherAccount(u3));
+//		System.out.println(ud.acceptMoneyTransfer(1));
+//		System.out.println(ud.deleteMoneyTransfer(2));
+//		System.out.println(ud.viewAllIncomingMoneyTranfers(1));
+//		System.out.println(ud.viewAllOutgoingMoneyTransfers(2));
 	}
 }
