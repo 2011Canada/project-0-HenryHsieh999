@@ -1,7 +1,7 @@
 package com.revature.services;
 
 import com.revature.exceptions.UserNotFoundException;
-import com.revature.launcher.BankLauncher;
+import com.revature.launcher.HardBankLauncher;
 import com.revature.models.User;
 import com.revature.repositories.UserDAO;
 
@@ -56,6 +56,14 @@ public class CustomerServicesImplementation implements CustomerServiceInterface{
 	public User chkUserAccountType(int id) {
 		return ud.checkUserAccountType(id);
 	}
+//	public User acceptMoneyTransferFromAnotherUser(User u) {
+//	return ud.moneyTransferToAnotherAccount(u);
+//  }
+	public User transferMoneyToAnotherAccount(User u) {
+		return ud.moneyTransferToAnotherAccount(u);
+	}
+
+
 
 
 	

@@ -16,4 +16,6 @@ public interface CustomerServiceInterface {
 	public User withdraw(User u);
 	public User chkUserAccountStatus(int id);
 	public User chkUserAccountType(int id);
+//	public User acceptMoneyTransferFromAnotherUser(User u);
+	public User transferMoneyToAnotherAccount(User u);
 }

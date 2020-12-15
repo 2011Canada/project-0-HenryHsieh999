@@ -29,9 +29,11 @@ public interface UserDAO {
 	public User checkUserAccountStatus(int userId);
 	public User checkUserAccountType(int userId);
 
-//	public User moneyTransferToAnotherAccount();
+	public User moneyTransferToAnotherAccount(User u);
 
-//	public User acceptMoneyTransfer();
-
+	public User acceptMoneyTransfer();
+	
+	//use bufferreader
 //	public User viewLog();
+	
 }

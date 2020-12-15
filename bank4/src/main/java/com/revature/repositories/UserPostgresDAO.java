@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.revature.exceptions.UserNotFoundException;
-import com.revature.launcher.BankLauncher;
+import com.revature.launcher.HardBankLauncher;
 import com.revature.models.Account;
 import com.revature.models.Customer;
 import com.revature.models.User;
@@ -279,12 +279,12 @@ public class UserPostgresDAO implements UserDAO{
 					u.add(c);
 				}
 			}catch(SQLException e) {
-				BankLauncher.e720Logger.debug("Error has occured when trying to findallcustomer");
+				HardBankLauncher.e720Logger.debug("Error has occured when trying to findallcustomer");
 				e.printStackTrace();
 			} finally {
 				cf.releaseConnection(conn);
 			}
-			BankLauncher.e720Logger.info(u);
+			HardBankLauncher.e720Logger.info(u);
 			return u;
 		}
 	public List<User> findAllEmployee() {
@@ -299,12 +299,12 @@ public class UserPostgresDAO implements UserDAO{
 				u.add(c);
 			}
 		}catch(SQLException e) {
-			BankLauncher.e720Logger.debug("Error has occured when trying to findAllEmployee in UserPostgresDAO");
+			HardBankLauncher.e720Logger.debug("Error has occured when trying to findAllEmployee in UserPostgresDAO");
 			e.printStackTrace();
 		} finally {
 			cf.releaseConnection(conn);
 		}
-		BankLauncher.e720Logger.info(u);
+		HardBankLauncher.e720Logger.info(u);
 		return u;
 	}
 	public List<User> findAllBankAccountsUnderSameOwner(int userId){
@@ -320,12 +320,12 @@ public class UserPostgresDAO implements UserDAO{
 				u.add(c);
 			}
 		}catch(SQLException e) {
-			BankLauncher.e720Logger.debug("Error has occured when trying to findAllBankAccountsUnderSameOwner");
+			HardBankLauncher.e720Logger.debug("Error has occured when trying to findAllBankAccountsUnderSameOwner");
 			e.printStackTrace();
 		} finally {
 			cf.releaseConnection(conn);
 		}
-		BankLauncher.e720Logger.info(u);
+		HardBankLauncher.e720Logger.info(u);
 		return u;
 	}
 	public List<User> findAllLockedUserAccounts() {
@@ -346,7 +346,29 @@ public class UserPostgresDAO implements UserDAO{
 		}
 		return u;
 	}
-
-
+	
+	
+	public User moneyTransferToAnotherAccount(User u) {
+		Connection conn = cf.getConnection();
+		try {
+			String sql = "insert into money_transfer (receiver_account_id, balance, sender_account_id, money_transfer_status) values (?,?,?,?);";
+			PreparedStatement moneyTransferToAnotherAccount = conn.prepareStatement(sql);
+			moneyTransferToAnotherAccount.setInt(1, u.getReceiverAccountID());
+			moneyTransferToAnotherAccount.setDouble(2, u.getBalance());
+			moneyTransferToAnotherAccount.setInt(3, u.getSenderAccountID());
+			moneyTransferToAnotherAccount.setString(4, "pending");
+			moneyTransferToAnotherAccount.executeUpdate();
+		} catch(SQLException e) {
+			e.printStackTrace();
+		} finally {
+			cf.releaseConnection(conn);
+		}
+		return u;
+	
+	}
+	public User acceptMoneyTransfer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

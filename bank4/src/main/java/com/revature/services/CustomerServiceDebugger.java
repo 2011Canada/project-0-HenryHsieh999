@@ -10,6 +10,7 @@ public class CustomerServiceDebugger {
 		UserDAO ud = new UserPostgresDAO();
 //		User u = new User();
 		User u = new User(0,6);
+		User u3 = new User(1, 1241.12, 2, "pending");
 		CustomerServicesImplementation csi = new CustomerServicesImplementation(ud);
 //		System.out.println(csi.deposit(u));
 //		System.out.println(csi.chkUserAccountStatus(6));
@@ -17,6 +18,7 @@ public class CustomerServiceDebugger {
 //		System.out.println(csi.findUserIdByUsername("bbbb").getUserId());
 //		System.out.println(csi.viewBalance(1).getBalance());
 //		System.out.println(csi.chkUserAccountType(1));
-		System.out.println(csi.newDefaultBankAccount(u));
+//		System.out.println(csi.newDefaultBankAccount(u));
+		System.out.println(csi.transferMoneyToAnotherAccount(u3));
 	}
 }

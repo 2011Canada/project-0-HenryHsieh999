@@ -5,6 +5,10 @@ public class User{
 	private int userId;
 	private int accountId;
 	private double balance;
+	private int receiverAccountID;
+	private int senderAccountID;
+	private double tempMoneyTransfer;
+	private String transferState;
 	private String username;
 	private String password;
 	private String firstName;
@@ -81,10 +85,23 @@ public class User{
 		this.tpe = tpe;
 	}
 	
+	public User(int receiverAccountID, double balance, int senderAccountID, String transferState) {
+		super();
+		this.receiverAccountID = receiverAccountID;
+		this.balance = balance;
+		this.senderAccountID = senderAccountID;
+		this.transferState = transferState;
+	}
+	public User(int receiverAccountID, double tempMoneyTransfer, int senderAccountID) {
+		super();
+		this.receiverAccountID = receiverAccountID;
+		this.tempMoneyTransfer = tempMoneyTransfer;
+		this.senderAccountID = senderAccountID;
+	}
 	public int getUserId() {
 		return userId;
 	}
-
+	
 	public void setUserId(int userId) {
 		this.userId = userId;
 	}
@@ -92,18 +109,34 @@ public class User{
 	public int getAccountId() {
 		return accountId;
 	}
-	
 	public void setAccountId(int accountId) {
 		this.accountId = accountId;
 	}
 	public void setBalance(double balance) {
 		this.balance = balance;
 	}
-	
+	public int getReceiverAccountID() {
+		return receiverAccountID;
+	}
+	public void setReceiverAccountID(int receiverAccountID) {
+		this.receiverAccountID = receiverAccountID;
+	}
+	public int getSenderAccountID() {
+		return senderAccountID;
+	}
+	public void setSenderAccountID(int senderAccountID) {
+		this.senderAccountID = senderAccountID;
+	}
 	public double getBalance() {
 		return balance;
 	}
-	
+	public Double getTempMoneyTransfer() {
+		return tempMoneyTransfer;
+	}
+
+	public void setTempMoneyTransfer(double tempMoneyTransfer) {
+		this.tempMoneyTransfer = tempMoneyTransfer;
+	}
 	public String getUsername() {
 		return username;
 	}
@@ -153,10 +186,13 @@ public class User{
 	}
 	@Override
 	public String toString() {
-		return "userId=" + userId + ", accountId=" + accountId + ", balance=" + balance + ", username=" + username
-				+ ", password=" + password + ", firstName=" + firstName + ", lastName=" + lastName + ", tpe=" + tpe
-				+ ", userAccountStatus=" + userAccountStatus + "\n";
+		return "User [userId=" + userId + ", accountId=" + accountId + ", balance=" + balance + ", receiverAccountID="
+				+ receiverAccountID + ", senderAccountID=" + senderAccountID + ", transferState=" + transferState
+				+ ", username=" + username + ", password=" + password + ", firstName=" + firstName + ", lastName="
+				+ lastName + ", tpe=" + tpe + ", userAccountStatus=" + userAccountStatus + "]";
 	}
+	
+	
 
 
 	

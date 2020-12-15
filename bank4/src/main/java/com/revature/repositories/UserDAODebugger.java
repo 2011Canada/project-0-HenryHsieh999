@@ -9,6 +9,7 @@ public class UserDAODebugger {
 		UserDAO ud = new UserPostgresDAO();
 		User u1 = new User("masteruser1", "secret", "henry", "hsieh");
 		User u = new User(500.42, 5);
+		User u3 = new User(1, 24.41, 2, "pending");
 //		User u2 = new User(330, 2);
 //		System.out.println(ud.findUserByUsernameAndPassword("aaaa", "pword"));
 //		System.out.println(ud.findAllCustomer());
@@ -23,9 +24,10 @@ public class UserDAODebugger {
 //		System.out.println(u.getUserId());
 //		System.out.println(ud.updateBankAccountBalance(u2));
 //		System.out.println(ud.findAllLockedUserAccounts());
-		System.out.println(ud.findAllCustomer());
+//		System.out.println(ud.findAllCustomer());
 //		System.out.println(ud.findAllBankAccountsUnderSameOwner(6));
 //		System.out.println(ud.findAccountId(2));
 //		System.out.println(ud.checkUserAccountStatus(6));
+		System.out.println(ud.moneyTransferToAnotherAccount(u3));
 	}
 }

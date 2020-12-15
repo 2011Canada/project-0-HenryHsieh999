@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.revature.exceptions.UserNotFoundException;
-import com.revature.launcher.BankLauncher;
 import com.revature.models.User;
 import com.revature.repositories.UserDAO;
 import com.revature.repositories.UserPostgresDAO;
@@ -20,8 +19,11 @@ public class MasterMenu {
 	static String yn = "";
 	static double money = 0;
 	static double totalBalance = 0;
+	static double currentBalance = 0;
 	
-	static double moneyTransfer = 0;
+	static double tempMoneyTransfer = 0;
+	static int receiverAccountID = 0;
+	static int senderAccountID = 0;
 	
 	static UserPostgresDAO uPDAO;
 	static User u;
@@ -166,7 +168,7 @@ public class MasterMenu {
 		}else if(money > 0.0) {
 			totalBalance = csi.viewBalance(currentUserId).getBalance();
 			if(totalBalance + money < 0) {
-				System.out.println("You are going into overdraft and will be charged daily interest!\nHard Bank Thanks you for your money!");				
+				System.out.println("You are going into overdraft and will be charged daily interest!\nHard Bank Thanks you for your money!");					
 			}
 			User user = new User(totalBalance - money, currentUserId);
 			csi.withdraw(user);
@@ -206,13 +208,36 @@ public class MasterMenu {
 	}
 	
 	private void acceptMoneyTransfer() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
 
-	private void transferMoneytoAnotherAccount() {
-		// TODO Auto-generated method stub
+	private void transferMoneytoAnotherAccount() throws UserNotFoundException {
+		System.out.println("Current user id is : \n" + currentUserId);
+		System.out.println("Option 5 selected!");
+		System.out.println("Please enter the Receiver's bank account ID!");
+		receiverAccountID = Integer.parseInt(inString());
+		System.out.println("Please enter the Sender's bank account ID");
+		senderAccountID = Integer.parseInt(inString());
+		System.out.println("Please enter the balance you want to send: $");
+		tempMoneyTransfer = Integer.parseInt(inString());
+		//check for negative amount entered
+		currentBalance = csi.viewBalance(currentUserId).getBalance();
+		System.out.println("You currently have: $" + currentBalance);
+		if(tempMoneyTransfer <= 0) {
+			System.out.println("Please enter a amount more than 0!");
+			transferMoneytoAnotherAccount();
+		}else if((currentBalance - tempMoneyTransfer) < 0) {
+			System.out.println("You are going into overdraft! You will pay interest daily! Hard Bank loves your money!");
+			User u = new User(receiverAccountID, tempMoneyTransfer, senderAccountID);
+			csi.transferMoneyToAnotherAccount(u);
+		}else if((currentBalance - tempMoneyTransfer) > 0) {
+			System.out.println("You're transfer of: $" + tempMoneyTransfer + " is now pending!");
+			customerMenuOption();
+		}
+		
+		customerMenuOption();
 		
 	}
 
