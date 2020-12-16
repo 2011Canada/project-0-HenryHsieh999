@@ -1,11 +1,20 @@
 package com.revature.menu;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import javax.xml.transform.TransformerFactoryConfigurationError;
 
 import com.revature.exceptions.UserNotFoundException;
+import com.revature.launcher.HardBankLauncher;
 import com.revature.models.User;
 import com.revature.repositories.UserDAO;
 import com.revature.repositories.UserPostgresDAO;
@@ -62,13 +71,31 @@ public class MasterMenu {
 			state = inInt("login options:"); 
 			switch(state){
 				case 1:
-					employeeLogin();
+					try {
+						employeeLogin();
+					} catch (Exception e) {
+						HardBankLauncher.e720Logger.debug("Cannot login!");
+						System.out.println("Cannot login please try again!");
+						e.printStackTrace();
+					}
 					break;
 				case 2:
-					customerLogin();
+					try {
+						customerLogin();
+					} catch (Exception e) {
+						HardBankLauncher.e720Logger.debug("Cannot login!");
+						System.out.println("Cannot login please try again!");
+						e.printStackTrace();
+					}
 					break;
 				case 3:
-					newCustomerCreateAccountMenu();
+					try {
+						newCustomerCreateAccountMenu();
+					} catch (Exception e) {
+						HardBankLauncher.e720Logger.debug("Cannot create new Customer");
+						System.out.println("Cannot create new Customer please try again!");
+						e.printStackTrace();
+					}
 					break;
 				case 4:
 					System.out.println("You have exited the program!");
@@ -97,19 +124,48 @@ public class MasterMenu {
 			state = inInt("Employee options:"); 
 			switch(state){
 				case 1:
-					rejectBankAccount();
+					try {
+						rejectBankAccount();
+					} catch (Exception e) {
+						HardBankLauncher.e720Logger.debug("Cannot Reject Bank Account");
+						System.out.println("Cannot Reject Bank Account please try again!");
+						e.printStackTrace();
+					}
 					break;
 				case 2:
-					AcceptBankAccount();
+					try {
+						AcceptBankAccount();
+					} catch (Exception e) {
+						HardBankLauncher.e720Logger.debug("Cannot Accept Bank Account");
+						System.out.println("Cannot Accept Bank Account please try again!");
+						e.printStackTrace();
+					}	
 					break;
 				case 3:
-					viewAllCustomerAccounts();
+					try {
+						viewAllCustomerAccounts();
+					} catch (Exception e) {
+						HardBankLauncher.e720Logger.debug("Cannot view all customer Accounts");
+						System.out.println("Cannot view all customer Accounts please try again!");
+						e.printStackTrace();
+					}	
 					break;
 				case 4:
-					findUserByUserId();
+					try {
+						findUserByUserId();
+					} catch (Exception e) {
+						HardBankLauncher.e720Logger.debug("Cannot find user by user Id");
+						System.out.println("Cannot find user by user Id please try again!");
+						e.printStackTrace();
+					}	
 					break;
 				case 5:
-					viewLog();
+					try {
+						viewLog();
+					} catch (Exception e) {
+						HardBankLauncher.e720Logger.debug("Cannot view log!");
+						e.printStackTrace();
+					}
 					break;
 				case 6:
 					System.out.println("You have logged out!");
@@ -143,25 +199,68 @@ public class MasterMenu {
 			state = inInt("Customer options:");  
 			switch(state){
 				case 1:
-					withdraw();
+					try {
+						withdraw();
+					} catch (Exception e) {
+						HardBankLauncher.e720Logger.debug("Cannot withdraw amount");
+						System.out.println("Cannot withdraw amount please try again!");
+						e.printStackTrace();
+					}	
 					break;
 				case 2:
-					deposit();
+					try {
+						deposit();
+					} catch (Exception e) {
+						HardBankLauncher.e720Logger.debug("Cannot deposit amount");
+						System.out.println("Cannot deposit amount please try again!");
+						e.printStackTrace();
+					}	
 					break;
 				case 3:
-					viewAccountBalance();
+					try {
+						viewAccountBalance();
+					} catch (Exception e) {
+						HardBankLauncher.e720Logger.debug("Cannot view Account Balance");
+						System.out.println("Cannot view Account Balance please try again!");
+						e.printStackTrace();
+					}
 					break;
 				case 4:
-					acceptMoneyTransfer();
+					try {
+						acceptMoneyTransfer();
+					} catch (Exception e) {
+						HardBankLauncher.e720Logger.debug("Cannot accept Money Transfer");
+						System.out.println("Cannot accept Money Transfer please try again!");
+						e.printStackTrace();
+					}
+
 					break;
 				case 5:
-					seeAllIncomingMoneyTransfers();
+					try {
+						seeAllIncomingMoneyTransfers();
+					} catch (Exception e) {
+						HardBankLauncher.e720Logger.debug("Cannot see All Incoming Money Transfers");
+						System.out.println("Cannot see All Incoming Money Transfers please try again!");
+						e.printStackTrace();
+					}
 					break;
 				case 6:
-					seeAllOutGoingMoneyTransfers();
+					try {
+						seeAllOutGoingMoneyTransfers();
+					} catch (Exception e) {
+						HardBankLauncher.e720Logger.debug("Cannot see All Out Going Money Transfers");
+						System.out.println("Cannot see All Out Going Money Transfers please try again!");
+						e.printStackTrace();
+					}
 					break;
 				case 7:
-					transferMoneytoAnotherAccount();
+					try {
+						transferMoneytoAnotherAccount();
+					} catch (Exception e) {
+						HardBankLauncher.e720Logger.debug("Cannot transfer Money to Another Account");
+						System.out.println("Cannot transfer Money to Another Account please try again!");
+						e.printStackTrace();
+					}
 					break;
 				case 8:
 					System.out.println("You have logged out!\n");
@@ -191,7 +290,7 @@ public class MasterMenu {
 		}else if(money > 0.0) {
 			totalBalance = csi.viewBalance(currentUserId).getBalance();
 			if(totalBalance + money < 0) {
-				System.out.println("You are going into overdraft and will be charged daily interest!\nHard Bank Thanks you for your money!");					
+				System.out.println("Our bank does not allow for overdraft! We are a bank with moral!");					
 			}
 			User user = new User(totalBalance - money, currentUserId);
 			csi.withdraw(user);
@@ -235,15 +334,26 @@ public class MasterMenu {
 		System.out.println("Current user id is : \n" + currentUserId);
 		System.out.println("Option 4 selected!");
 		currentUserId = csi.findUserIdByUsername(username).getUserId();
-		transferIDs = Integer.parseInt(inString());
-		System.out.println(transferIDs);
-		csi.acceptMoneyTransferFromAnotherUser(transferIDs);
-		System.out.println("You have finished accepting the money!");
-		totalBalance = csi.viewBalance(currentUserId).getBalance();
-		System.out.println("You now have a balance of: $" + totalBalance);
-		customerMenuOption();
+		System.out.println("Are you sure you want to accept this money?");
+		System.out.println("Are you sure you want to accept this money?\n1.Confirm\n2.Decline");
+		if(inString().equals("1")) {
+			System.out.println("Please enter the transfer ID you would like to accept!");
+			transferIDs = Integer.parseInt(inString());
+			csi.acceptMoneyTransferFromAnotherUser(transferIDs);
+			System.out.println("You have finished accepting the money!");
+			totalBalance = csi.viewBalance(currentUserId).getBalance();
+			System.out.println("You now have a balance of: $" + totalBalance);
+			esi.deleteMoneyTransfer(transferIDs);
+			customerMenuOption();
+		}else if(inString().equals("2")) {
+			System.out.println("You have declined to accept the money! Such a nice person!");
+			
+			customerMenuOption();
+		}else {
+			System.out.println("Please enter either 1 or 2!!! Hard Bank no like bad choices!");
+			customerMenuOption();
+		}
 	}
-
 	private void seeAllIncomingMoneyTransfers() throws UserNotFoundException {
 		System.out.println("Current user id is : \n" + currentUserId);
 		BankAccountId = ud.findAccountId(currentUserId).getAccountId();
@@ -252,6 +362,7 @@ public class MasterMenu {
 		System.out.println(csi.viewAllIncomingMoneyTranfers(BankAccountId));
 		customerMenuOption();	
 	}
+	
 	private void seeAllOutGoingMoneyTransfers() throws UserNotFoundException {
 		System.out.println("Current user id is : \n" + currentUserId);
 		BankAccountId = ud.findAccountId(currentUserId).getAccountId();
@@ -260,9 +371,8 @@ public class MasterMenu {
 		currentUserId = csi.findUserIdByUsername(username).getUserId();
 		System.out.println(csi.viewAllOutgoingMoneyTransfers(BankAccountId));
 		customerMenuOption();
-		
 	}
-	private void transferMoneytoAnotherAccount() throws UserNotFoundException {
+	private void transferMoneytoAnotherAccount() {
 		System.out.println("Current user id is : \n" + currentUserId);
 		BankAccountId = ud.findAccountId(currentUserId).getAccountId();
 		System.out.println("Current Bank Account Id is: \n" + BankAccountId);
@@ -275,7 +385,6 @@ public class MasterMenu {
 		tempMoneyTransfer = Double.parseDouble(inString());
 		//check for negative amount entered
 		currentBalance = csi.viewBalance(currentUserId).getBalance();
-		System.out.println("You currently have: $" + currentBalance);
 		if(tempMoneyTransfer <= 0) {
 			System.out.println("Please enter a amount more than 0!");
 			transferMoneytoAnotherAccount();
@@ -283,33 +392,55 @@ public class MasterMenu {
 			System.out.println("You are going into overdraft! You will pay interest daily! Hard Bank loves your money!");
 			User u = new User(receiverAccountID, tempMoneyTransfer, senderAccountID);
 			csi.transferMoneyToAnotherAccount(u);
+			totalBalance = csi.viewBalance(currentUserId).getBalance();
+			totalBalance = totalBalance - tempMoneyTransfer;
+			User user = new User(totalBalance - tempMoneyTransfer, currentUserId);
+			csi.updateBalance(user);
+			System.out.println("You're transfer of: $" + tempMoneyTransfer + " is now pending!");
+			System.out.println("You now have: $" + totalBalance + " in BankAccountId: " + BankAccountId);
 		}else if((currentBalance - tempMoneyTransfer) > 0) {
 			System.out.println("You're transfer of: $" + tempMoneyTransfer + " is now pending!");
 			User u2 = new User(receiverAccountID, tempMoneyTransfer, senderAccountID);
+			totalBalance = csi.viewBalance(currentUserId).getBalance();
+			totalBalance = totalBalance - tempMoneyTransfer;
+			User user = new User(totalBalance - tempMoneyTransfer, currentUserId);
+			csi.updateBalance(user);
+			System.out.println("You now have: $" + totalBalance + " in " + "Bank Account id:" + BankAccountId);
 			csi.transferMoneyToAnotherAccount(u2);
-			customerMenuOption();
+			try {
+				customerMenuOption();
+			} catch (UserNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
-		customerMenuOption();
+		try {
+			customerMenuOption();
+		} catch (UserNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 
 	
 	private void rejectBankAccount() throws UserNotFoundException {
 		System.out.println("Option 1 selected");
-		System.out.println("Please enter the Bank Account id you want to Reject.\n");
-		System.out.println("Bank Account id");
+		System.out.println("Please enter the User Account ID you want to Reject.\n");
+		System.out.println("User Account ID:");
 		userTempIdForEmployeeManipulation = Integer.parseInt(inString());
 		esi.rejectCustomerBankAccountStatus(userTempIdForEmployeeManipulation);
+		System.out.println("Operation finished, returning to employee menu.\n");
 		employeeMenuOption();		
 	}
 
 	private void AcceptBankAccount() throws UserNotFoundException {
 		System.out.println("Option 2 selected");
-		System.out.println("Please enter the Bank Account id you want to Accept.");
-		System.out.println("Bank Account id");
+		System.out.println("Please enter the User Account ID you want to Accept.");
+		System.out.println("User Account ID");
 		userTempIdForEmployeeManipulation = Integer.parseInt(inString());
 		esi.approveCustomerBankAccountStatus(userTempIdForEmployeeManipulation);
-		System.out.println("Option finished, returning to employee menu.\n");
+		System.out.println("Operation finished, returning to employee menu.\n");
 		
 		employeeMenuOption();		
 	}
@@ -328,9 +459,19 @@ public class MasterMenu {
 		employeeMenuOption();
 	} 
 
-	private void viewLog() {
-		// TODO Auto-generated method stub
-		
+	private void viewLog() throws Exception, IOException {
+		List<String> list = new ArrayList<>();
+		FileReader fr = new FileReader("C:\\Users\\Henry\\Documents\\workspace-spring-tool-suite-4-4.8.1.RELEASE\\bank4\\logs\\trace.log");
+		try(BufferedReader br = new BufferedReader(fr)){
+			String strCurrentLine;
+			while((strCurrentLine = br.readLine()) != null) {
+				System.out.println(strCurrentLine);
+		}
+		}catch(IOException e) {
+			e.printStackTrace();
+		}catch(Exception e1) {
+			e1.printStackTrace();
+		}
 	}
 
 	public void employeeLogin() throws UserNotFoundException {

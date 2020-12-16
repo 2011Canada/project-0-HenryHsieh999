@@ -11,6 +11,7 @@ public interface CustomerServiceInterface {
 	public User login(String username, String password) throws UserNotFoundException;
 	public User findAccount(int id);
 	public User findUserIdByUsername(String username) throws UserNotFoundException;
+	public User updateBalance(User u);
 	public User viewBalance(int id);
 	public User deposit(User u);
 	public User withdraw(User u);

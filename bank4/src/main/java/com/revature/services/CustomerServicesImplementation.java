@@ -22,25 +22,27 @@ public class CustomerServicesImplementation implements CustomerServiceInterface{
 		return ud.createNewBankAccount(u);
 	}
 	public User login(String username, String password) throws UserNotFoundException {
+		HardBankLauncher.e720Logger.info("User " + username + " has logged in");
 		return ud.findUserByUsernameAndPassword(username, password);
 	}
 
 	
 	public User findAccount(int id) {
+		HardBankLauncher.e720Logger.debug("User Account was searched " + id);
 		return ud.findUserByUserId(id);
 	}
 
 	
 	public User deposit(User u) {
+		HardBankLauncher.e720Logger.info(u.getFirstName() + " " + u.getLastName() + " " + " Deposited: $");
 		return ud.updateBankAccountBalance(u);
 		
-//		BankLauncher.e720Logger.info(u.getFirstName() + " " + u.getLastName() + " " + " Deposited: $");
 	}
 
 	
 	public User withdraw(User u) {
+		HardBankLauncher.e720Logger.info(u.getFirstName() + " " + u.getLastName() + " " + " Withdrew: $");
 		return ud.updateBankAccountBalance(u);
-//		BankLauncher.e720Logger.info(u.getFirstName() + " " + u.getLastName() + " " + " Withdrew: $");
 	}
 	
 	public User viewBalance(int id) {
@@ -52,16 +54,20 @@ public class CustomerServicesImplementation implements CustomerServiceInterface{
 	}
 
 	public User chkUserAccountStatus(int id) {
+		HardBankLauncher.e720Logger.debug("User account status was checked. User id = " + id);
 		return ud.checkUserAccountStatus(id);
 	}
 
 	public User chkUserAccountType(int id) {
+		HardBankLauncher.e720Logger.debug("User account type was checked. User id = " + id);
 		return ud.checkUserAccountType(id);
 	}
 	public User acceptMoneyTransferFromAnotherUser(int transferId) {
-	return ud.acceptMoneyTransfer(transferId);
+		HardBankLauncher.e720Logger.debug("User accepted money from transferID" + transferId);
+		return ud.acceptMoneyTransfer(transferId);
 	}
 	public User transferMoneyToAnotherAccount(User u) {
+		HardBankLauncher.e720Logger.info(u.getFirstName() + " " + u.getLastName() + " " + "is trying to transfer money.");
 		return ud.moneyTransferToAnotherAccount(u);
 	}
 
@@ -69,16 +75,20 @@ public class CustomerServicesImplementation implements CustomerServiceInterface{
 		return ud.getMoneyTransferID(userId);
 	}
 	public List<User> viewAllIncomingMoneyTranfers(int userId) {
+		HardBankLauncher.e720Logger.debug("User viewed all incoming money transfers" + userId);
 		return ud.viewAllIncomingMoneyTranfers(userId);
 	}
 
 	public List<User> viewAllOutgoingMoneyTransfers(int userId) {
+		HardBankLauncher.e720Logger.debug("User viewed all outgoing money transfers" + userId);
 		return ud.viewAllOutgoingMoneyTransfers(userId);
 	}
 
+	@Override
+	public User updateBalance(User u) {
+		HardBankLauncher.e720Logger.debug("User viewed updated their account balance" + u);
+		return ud.updateBankAccountBalance(u);
+	}
 
-
-
-	
 
 }

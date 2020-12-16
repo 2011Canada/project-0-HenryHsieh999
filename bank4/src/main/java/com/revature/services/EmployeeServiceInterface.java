@@ -16,4 +16,5 @@ public interface EmployeeServiceInterface {
 
 	public User deleteMoneyTransfer(int transferId);
 	public User getMoneyTransferID(int userId);
+
 }

@@ -219,13 +219,10 @@ public class User{
 	}
 	@Override
 	public String toString() {
-		return "userId=" + userId + ", accountId=" + accountId + ", balance=" + balance + ", receiverAccountID="
-				+ receiverAccountID + ", senderAccountID=" + senderAccountID + ", tempMoneyTransfer="
-				+ tempMoneyTransfer + ", transferID=" + transferID + ", transferState=" + transferState + ", username="
-				+ username + ", password=" + password + ", firstName=" + firstName + ", lastName=" + lastName + ", tpe="
-				+ tpe + ", userAccountStatus=" + userAccountStatus + "\n";
+		return "User ID=" + userId + ", Account ID=" + accountId + ", Balance= $" + balance + ", receiverAccountID="
+				+ receiverAccountID + ", SenderAccountID=" + senderAccountID + ", Pending Money Transfer= $"
+				+ tempMoneyTransfer + ", TransferID=" + transferID + ", TransferState=" + transferState + ", Username="
+				+ username + ", password=" + password + ", First Name=" + firstName + ", Last Name=" + lastName + ", User Type="
+				+ tpe + ", User Account Status=" + userAccountStatus + "\n";
 	}
-
-
-	
 }

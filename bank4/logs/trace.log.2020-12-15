@@ -1,0 +1,10 @@
+2020-12-16 02:11:52 e720 [INFO] Server has started!
+2020-12-16 02:12:00 e720 [INFO] Uservalohas logged in
+2020-12-16 02:12:00 e720 [DEBUG] User account status was checked. User id = 10
+2020-12-16 02:12:00 e720 [DEBUG] User account type was checked. User id = 10
+2020-12-16 02:12:16 e720 [DEBUG] User viewed all incoming money transfers18
+2020-12-16 02:12:16 e720 [INFO] [User ID=0, Account ID=0, Balance= $0.0, receiverAccountID=18, SenderAccountID=19, Pending Money Transfer= $24.0, TransferID=12, TransferState=pending, Username=null, password=null, First Name=null, Last Name=null, User Type=null, User Account Status=null
+, User ID=0, Account ID=0, Balance= $0.0, receiverAccountID=18, SenderAccountID=19, Pending Money Transfer= $45.0, TransferID=13, TransferState=pending, Username=null, password=null, First Name=null, Last Name=null, User Type=null, User Account Status=null
+, User ID=0, Account ID=0, Balance= $0.0, receiverAccountID=18, SenderAccountID=19, Pending Money Transfer= $42.51, TransferID=14, TransferState=pending, Username=null, password=null, First Name=null, Last Name=null, User Type=null, User Account Status=null
+, User ID=0, Account ID=0, Balance= $0.0, receiverAccountID=18, SenderAccountID=19, Pending Money Transfer= $1000.0, TransferID=15, TransferState=pending, Username=null, password=null, First Name=null, Last Name=null, User Type=null, User Account Status=null
+]

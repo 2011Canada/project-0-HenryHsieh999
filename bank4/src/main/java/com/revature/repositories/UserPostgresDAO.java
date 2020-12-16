@@ -98,7 +98,7 @@ public class UserPostgresDAO implements UserDAO{
 		try {
 			String sql = "insert into account (balance, customer_id) values (?, ?);";
 			PreparedStatement insertNewBankAccount = conn.prepareStatement(sql);
-			insertNewBankAccount.setDouble(1, 0.0);
+			insertNewBankAccount.setDouble(1, 0);
 			insertNewBankAccount.setInt(2, u.getUserId());
 			insertNewBankAccount.executeUpdate();
 		} catch(SQLException e) {
@@ -112,7 +112,7 @@ public class UserPostgresDAO implements UserDAO{
 	public User findUserByUserId(int id) {
 		Connection conn = cf.getConnection();
 		try {
-			String sql = "select * from users where user_id = ?;";
+			String sql = "select * from users u left join account a on u.user_id = a.customer_id where user_id = ?;";
 			PreparedStatement findUserByid = conn.prepareStatement(sql);
 			findUserByid.setInt(1, id);
 			
@@ -122,6 +122,10 @@ public class UserPostgresDAO implements UserDAO{
 			u.setUserId(res.getInt("user_id"));
 			u.setFirstName(res.getString("fname"));
 			u.setLastName(res.getString("lname"));
+			u.setBalance(res.getDouble("balance"));
+			u.setTpe(res.getString("tpe"));
+			u.setUserAccountStatus(res.getString("user_status"));
+			u.setAccountId(res.getInt("account_id"));
 			return u;
 		}
 		
@@ -169,13 +173,13 @@ public class UserPostgresDAO implements UserDAO{
 	public User viewBalance(int userId) {
 		Connection conn = cf.getConnection();
 		try {
-			String sql = "select * from account where account_id = ?";
+			String sql = "select * from account where customer_id = ?";
 			PreparedStatement getBalance = conn.prepareStatement(sql);
 			getBalance.setInt(1, userId);
 			ResultSet res = getBalance.executeQuery();
 			while(res.next()) {
 				User u = new User();
-				u.setUserId(res.getInt("account_id"));
+				u.setUserId(res.getInt("customer_id"));
 				u.setBalance(res.getDouble("balance"));
 				return u;
 			}
@@ -426,7 +430,7 @@ public class UserPostgresDAO implements UserDAO{
 			viewAllOutgoingMoneyTransfers.setInt(1, userId);
 			ResultSet res = viewAllOutgoingMoneyTransfers.executeQuery();
 			while(res.next()) {
-				Customer c = new Customer(res.getInt("receiver_account_id"), res.getDouble("balance"), res.getInt("sender_account_id"), res.getString("money_transfer_status"), res.getInt("transfer_id"), res.getInt("account_id"));
+				Customer c = new Customer(res.getInt("receiver_account_id"), res.getDouble("balance"), res.getInt("sender_account_id"), res.getString("money_transfer_status"), res.getInt("transfer_id"));
 				u.add(c);
 			}
 		}catch(SQLException e) {
