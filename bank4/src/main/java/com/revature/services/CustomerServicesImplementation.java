@@ -34,14 +34,12 @@ public class CustomerServicesImplementation implements CustomerServiceInterface{
 
 	
 	public User deposit(User u) {
-		HardBankLauncher.e720Logger.info(u.getFirstName() + " " + u.getLastName() + " " + " Deposited: $");
 		return ud.updateBankAccountBalance(u);
 		
 	}
 
 	
 	public User withdraw(User u) {
-		HardBankLauncher.e720Logger.info(u.getFirstName() + " " + u.getLastName() + " " + " Withdrew: $");
 		return ud.updateBankAccountBalance(u);
 	}
 	

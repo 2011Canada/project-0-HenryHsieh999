@@ -1,10 +1,64 @@
-2020-12-16 02:11:52 e720 [INFO] Server has started!
-2020-12-16 02:12:00 e720 [INFO] Uservalohas logged in
-2020-12-16 02:12:00 e720 [DEBUG] User account status was checked. User id = 10
-2020-12-16 02:12:00 e720 [DEBUG] User account type was checked. User id = 10
-2020-12-16 02:12:16 e720 [DEBUG] User viewed all incoming money transfers18
-2020-12-16 02:12:16 e720 [INFO] [User ID=0, Account ID=0, Balance= $0.0, receiverAccountID=18, SenderAccountID=19, Pending Money Transfer= $24.0, TransferID=12, TransferState=pending, Username=null, password=null, First Name=null, Last Name=null, User Type=null, User Account Status=null
-, User ID=0, Account ID=0, Balance= $0.0, receiverAccountID=18, SenderAccountID=19, Pending Money Transfer= $45.0, TransferID=13, TransferState=pending, Username=null, password=null, First Name=null, Last Name=null, User Type=null, User Account Status=null
-, User ID=0, Account ID=0, Balance= $0.0, receiverAccountID=18, SenderAccountID=19, Pending Money Transfer= $42.51, TransferID=14, TransferState=pending, Username=null, password=null, First Name=null, Last Name=null, User Type=null, User Account Status=null
-, User ID=0, Account ID=0, Balance= $0.0, receiverAccountID=18, SenderAccountID=19, Pending Money Transfer= $1000.0, TransferID=15, TransferState=pending, Username=null, password=null, First Name=null, Last Name=null, User Type=null, User Account Status=null
+2020-12-16 10:47:21 e720 [INFO] Server has started!
+2020-12-16 10:47:33 e720 [INFO] User aaaa has logged in
+2020-12-16 10:47:33 e720 [DEBUG] User account status was checked. User id = 2
+2020-12-16 10:47:33 e720 [DEBUG] User account type was checked. User id = 2
+2020-12-16 10:47:33 e720 [DEBUG] User account type was checked. User id = 2
+2020-12-16 10:48:23 e720 [DEBUG] Cannot withdraw amount
+2020-12-16 10:49:04 e720 [INFO] User aaaa has logged out
+2020-12-16 10:49:45 e720 [INFO] User maple has logged in
+2020-12-16 10:49:45 e720 [DEBUG] User account status was checked. User id = 12
+2020-12-16 10:49:45 e720 [DEBUG] User account type was checked. User id = 12
+2020-12-16 10:49:45 e720 [DEBUG] User account type was checked. User id = 12
+2020-12-16 10:50:00 e720 [INFO] User maple has logged out
+2020-12-16 10:50:09 e720 [INFO] User Cloud has logged in
+2020-12-16 10:50:14 e720 [INFO] [User ID=2, Account ID=2, Balance= $19309.23, receiverAccountID=0, SenderAccountID=0, Pending Money Transfer= $0.0, TransferID=0, TransferState=null, Username=null, password=null, First Name=aa, Last Name=aaa, User Type=customer, User Account Status=active
+, User ID=3, Account ID=3, Balance= $541.67, receiverAccountID=0, SenderAccountID=0, Pending Money Transfer= $0.0, TransferID=0, TransferState=null, Username=null, password=null, First Name=bb, Last Name=bbb, User Type=customer, User Account Status=active
+, User ID=4, Account ID=4, Balance= $10.0, receiverAccountID=0, SenderAccountID=0, Pending Money Transfer= $0.0, TransferID=0, TransferState=null, Username=null, password=null, First Name=cc, Last Name=ccc, User Type=customer, User Account Status=active
+, User ID=5, Account ID=5, Balance= $30012.2, receiverAccountID=0, SenderAccountID=0, Pending Money Transfer= $0.0, TransferID=0, TransferState=null, Username=null, password=null, First Name=dd, Last Name=ddd, User Type=customer, User Account Status=active
+, User ID=6, Account ID=14, Balance= $0.0, receiverAccountID=0, SenderAccountID=0, Pending Money Transfer= $0.0, TransferID=0, TransferState=null, Username=null, password=null, First Name=henry, Last Name=hsieh, User Type=customer, User Account Status=inactive
+, User ID=7, Account ID=15, Balance= $30012.2, receiverAccountID=0, SenderAccountID=0, Pending Money Transfer= $0.0, TransferID=0, TransferState=null, Username=null, password=null, First Name=keyboard, Last Name=warrior, User Type=customer, User Account Status=active
+, User ID=10, Account ID=18, Balance= $159.0, receiverAccountID=0, SenderAccountID=0, Pending Money Transfer= $0.0, TransferID=0, TransferState=null, Username=null, password=null, First Name=brielle, Last Name=sorenson, User Type=customer, User Account Status=active
+, User ID=8, Account ID=16, Balance= $225.0, receiverAccountID=0, SenderAccountID=0, Pending Money Transfer= $0.0, TransferID=0, TransferState=null, Username=null, password=null, First Name=haha, Last Name=qent, User Type=customer, User Account Status=active
+, User ID=12, Account ID=21, Balance= $0.0, receiverAccountID=0, SenderAccountID=0, Pending Money Transfer= $0.0, TransferID=0, TransferState=null, Username=null, password=null, First Name=tachibana, Last Name=rin, User Type=customer, User Account Status=active
+, User ID=12, Account ID=20, Balance= $1226.43, receiverAccountID=0, SenderAccountID=0, Pending Money Transfer= $0.0, TransferID=0, TransferState=null, Username=null, password=null, First Name=tachibana, Last Name=rin, User Type=customer, User Account Status=active
+, User ID=13, Account ID=0, Balance= $0.0, receiverAccountID=0, SenderAccountID=0, Pending Money Transfer= $0.0, TransferID=0, TransferState=null, Username=null, password=null, First Name=abcd, Last Name=defg, User Type=customer, User Account Status=inactive
 ]
+2020-12-16 10:50:51 e720 [DEBUG] User Account was unlocked13
+2020-12-16 10:50:54 e720 [INFO] [User ID=2, Account ID=2, Balance= $19309.23, receiverAccountID=0, SenderAccountID=0, Pending Money Transfer= $0.0, TransferID=0, TransferState=null, Username=null, password=null, First Name=aa, Last Name=aaa, User Type=customer, User Account Status=active
+, User ID=3, Account ID=3, Balance= $541.67, receiverAccountID=0, SenderAccountID=0, Pending Money Transfer= $0.0, TransferID=0, TransferState=null, Username=null, password=null, First Name=bb, Last Name=bbb, User Type=customer, User Account Status=active
+, User ID=4, Account ID=4, Balance= $10.0, receiverAccountID=0, SenderAccountID=0, Pending Money Transfer= $0.0, TransferID=0, TransferState=null, Username=null, password=null, First Name=cc, Last Name=ccc, User Type=customer, User Account Status=active
+, User ID=5, Account ID=5, Balance= $30012.2, receiverAccountID=0, SenderAccountID=0, Pending Money Transfer= $0.0, TransferID=0, TransferState=null, Username=null, password=null, First Name=dd, Last Name=ddd, User Type=customer, User Account Status=active
+, User ID=6, Account ID=14, Balance= $0.0, receiverAccountID=0, SenderAccountID=0, Pending Money Transfer= $0.0, TransferID=0, TransferState=null, Username=null, password=null, First Name=henry, Last Name=hsieh, User Type=customer, User Account Status=inactive
+, User ID=7, Account ID=15, Balance= $30012.2, receiverAccountID=0, SenderAccountID=0, Pending Money Transfer= $0.0, TransferID=0, TransferState=null, Username=null, password=null, First Name=keyboard, Last Name=warrior, User Type=customer, User Account Status=active
+, User ID=10, Account ID=18, Balance= $159.0, receiverAccountID=0, SenderAccountID=0, Pending Money Transfer= $0.0, TransferID=0, TransferState=null, Username=null, password=null, First Name=brielle, Last Name=sorenson, User Type=customer, User Account Status=active
+, User ID=8, Account ID=16, Balance= $225.0, receiverAccountID=0, SenderAccountID=0, Pending Money Transfer= $0.0, TransferID=0, TransferState=null, Username=null, password=null, First Name=haha, Last Name=qent, User Type=customer, User Account Status=active
+, User ID=12, Account ID=21, Balance= $0.0, receiverAccountID=0, SenderAccountID=0, Pending Money Transfer= $0.0, TransferID=0, TransferState=null, Username=null, password=null, First Name=tachibana, Last Name=rin, User Type=customer, User Account Status=active
+, User ID=12, Account ID=20, Balance= $1226.43, receiverAccountID=0, SenderAccountID=0, Pending Money Transfer= $0.0, TransferID=0, TransferState=null, Username=null, password=null, First Name=tachibana, Last Name=rin, User Type=customer, User Account Status=active
+, User ID=13, Account ID=0, Balance= $0.0, receiverAccountID=0, SenderAccountID=0, Pending Money Transfer= $0.0, TransferID=0, TransferState=null, Username=null, password=null, First Name=abcd, Last Name=defg, User Type=customer, User Account Status=active
+]
+2020-12-16 10:51:10 e720 [INFO] User Cloud has logged out
+2020-12-16 10:51:27 e720 [INFO] User masteruser1 has logged in
+2020-12-16 10:51:27 e720 [DEBUG] User account status was checked. User id = 6
+2020-12-16 10:51:46 e720 [INFO] User Cloud has logged in
+2020-12-16 10:51:56 e720 [DEBUG] User Account was unlocked6
+2020-12-16 10:52:06 e720 [INFO] User Cloud has logged out
+2020-12-16 10:52:13 e720 [INFO] User masteruser1 has logged in
+2020-12-16 10:52:13 e720 [DEBUG] User account status was checked. User id = 6
+2020-12-16 10:52:13 e720 [DEBUG] User account type was checked. User id = 6
+2020-12-16 10:52:13 e720 [DEBUG] User account type was checked. User id = 6
+2020-12-16 10:52:41 e720 [DEBUG] User viewed all incoming money transfers14
+2020-12-16 10:52:41 e720 [INFO] []
+2020-12-16 10:52:45 e720 [DEBUG] User viewed all outgoing money transfers14
+2020-12-16 10:52:45 e720 [INFO] []
+2020-12-16 10:52:52 e720 [INFO] User masteruser1 has logged out
+2020-12-16 10:53:02 e720 [INFO] User maple has logged in
+2020-12-16 10:53:02 e720 [DEBUG] User account status was checked. User id = 12
+2020-12-16 10:53:03 e720 [DEBUG] User account type was checked. User id = 12
+2020-12-16 10:53:03 e720 [DEBUG] User account type was checked. User id = 12
+2020-12-16 10:53:07 e720 [DEBUG] User viewed all incoming money transfers20
+2020-12-16 10:53:07 e720 [INFO] []
+2020-12-16 10:53:08 e720 [DEBUG] User viewed all outgoing money transfers20
+2020-12-16 10:53:08 e720 [INFO] []
+2020-12-16 10:53:15 e720 [INFO] User maple has logged out
+2020-12-16 10:54:00 e720 [DEBUG] Cannot login!
+2020-12-16 10:54:13 e720 [INFO] User Cloud has logged in

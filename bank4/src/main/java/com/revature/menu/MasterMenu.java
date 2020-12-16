@@ -54,10 +54,10 @@ public class MasterMenu {
 	static int selection = 0;
 	
 	public void display() throws UserNotFoundException {
-		System.out.println("------------------------------");
-		System.out.println("     WELCOME TO HARD BANK     ");
-		System.out.println(" WHERE WE PLAY WITH YOUR MONEY");
-		System.out.println("------------------------------");
+		System.out.println("--------------------------------");
+		System.out.println("|     WELCOME TO HARD BANK     |");
+		System.out.println("| WHERE WE PLAY WITH YOUR MONEY|");
+		System.out.println("--------------------------------");
 
 		while(true) {
 			System.out.println("------------------------------");
@@ -168,6 +168,7 @@ public class MasterMenu {
 					}
 					break;
 				case 6:
+					HardBankLauncher.e720Logger.info("User " + username + " has logged out");
 					System.out.println("You have logged out!");
 					display();
 					break;
@@ -263,6 +264,7 @@ public class MasterMenu {
 					}
 					break;
 				case 8:
+					HardBankLauncher.e720Logger.info("User " + username + " has logged out");
 					System.out.println("You have logged out!\n");
 					display();
 					break;
@@ -394,7 +396,7 @@ public class MasterMenu {
 			csi.transferMoneyToAnotherAccount(u);
 			totalBalance = csi.viewBalance(currentUserId).getBalance();
 			totalBalance = totalBalance - tempMoneyTransfer;
-			User user = new User(totalBalance - tempMoneyTransfer, currentUserId);
+			User user = new User(totalBalance, currentUserId);
 			csi.updateBalance(user);
 			System.out.println("You're transfer of: $" + tempMoneyTransfer + " is now pending!");
 			System.out.println("You now have: $" + totalBalance + " in BankAccountId: " + BankAccountId);
@@ -403,7 +405,7 @@ public class MasterMenu {
 			User u2 = new User(receiverAccountID, tempMoneyTransfer, senderAccountID);
 			totalBalance = csi.viewBalance(currentUserId).getBalance();
 			totalBalance = totalBalance - tempMoneyTransfer;
-			User user = new User(totalBalance - tempMoneyTransfer, currentUserId);
+			User user = new User(totalBalance, currentUserId);
 			csi.updateBalance(user);
 			System.out.println("You now have: $" + totalBalance + " in " + "Bank Account id:" + BankAccountId);
 			csi.transferMoneyToAnotherAccount(u2);
@@ -508,16 +510,20 @@ public class MasterMenu {
 			if(csi.chkUserAccountStatus(currentUserId).getUserAccountStatus().equals("inactive")) {
 				System.out.println("Your account is currently locked. Please visit a branch for inquiries!");
 				display();
-			}else if(csi.chkUserAccountType(currentUserId).getTpe().equals("Employee")) {
+			}else if(csi.chkUserAccountType(currentUserId).getTpe().equals("employee")) {
 				System.out.println("You are not an employee! You don't get to take rob people!");
 				display();
+			}else if(csi.chkUserAccountType(currentUserId).getTpe().equals("customer")) {
+//				fname = ud.findAccountId(currentUserId).getFirstName();
+//				lname = ud.findUserIdByUsername(username).getLastName();
+				System.out.println("Welcome back to Hard Bank!");
+//				System.out.println("First name: " + fname + " Last name: " + lname);
+				customerMenuOption();
 			}
 		} catch(UserNotFoundException e) {
 			e.printStackTrace();
 			throw new UserNotFoundException();
-		} finally {
-			customerMenuOption();
-		}
+		} 
 	}
 	private void newCustomerCreateAccountMenu() throws UserNotFoundException {
 		System.out.println("Option 3 selected");
