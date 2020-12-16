@@ -19,6 +19,9 @@ public class CustomerServiceDebugger {
 //		System.out.println(csi.viewBalance(1).getBalance());
 //		System.out.println(csi.chkUserAccountType(1));
 //		System.out.println(csi.newDefaultBankAccount(u));
-		System.out.println(csi.transferMoneyToAnotherAccount(u3));
+//		System.out.println(csi.transferMoneyToAnotherAccount(u3));
+//		System.out.println(csi.acceptMoneyTransferFromAnotherUser(3));
+//		System.out.println(csi.getMoneyTransferID(1));
+		System.out.println(csi.viewAllIncomingMoneyTranfers(15));
 	}
 }

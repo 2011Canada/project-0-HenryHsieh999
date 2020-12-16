@@ -354,7 +354,7 @@ public class UserPostgresDAO implements UserDAO{
 			String sql = "insert into money_transfer (receiver_account_id, balance, sender_account_id, money_transfer_status) values (?,?,?,?);";
 			PreparedStatement moneyTransferToAnotherAccount = conn.prepareStatement(sql);
 			moneyTransferToAnotherAccount.setInt(1, u.getReceiverAccountID());
-			moneyTransferToAnotherAccount.setDouble(2, u.getBalance());
+			moneyTransferToAnotherAccount.setDouble(2, u.getTempMoneyTransfer());
 			moneyTransferToAnotherAccount.setInt(3, u.getSenderAccountID());
 			moneyTransferToAnotherAccount.setString(4, "pending");
 			moneyTransferToAnotherAccount.executeUpdate();
@@ -426,7 +426,7 @@ public class UserPostgresDAO implements UserDAO{
 			viewAllOutgoingMoneyTransfers.setInt(1, userId);
 			ResultSet res = viewAllOutgoingMoneyTransfers.executeQuery();
 			while(res.next()) {
-				Customer c = new Customer(res.getInt("receiver_account_id"), res.getDouble("balance"), res.getInt("sender_account_id"), res.getString("money_transfer_status"), res.getInt("transfer_id"));
+				Customer c = new Customer(res.getInt("receiver_account_id"), res.getDouble("balance"), res.getInt("sender_account_id"), res.getString("money_transfer_status"), res.getInt("transfer_id"), res.getInt("account_id"));
 				u.add(c);
 			}
 		}catch(SQLException e) {
@@ -441,14 +441,16 @@ public class UserPostgresDAO implements UserDAO{
 	public User getMoneyTransferID(int userId) {
 		Connection conn = cf.getConnection();
 		try {
-			String sql = "select * from users u left join money_transfer mt on u.user_id = mt.receiver_account_id where receiver_account_id = 1;";
-			PreparedStatement getBalance = conn.prepareStatement(sql);
-			getBalance.setInt(1, userId);
-			ResultSet res = getBalance.executeQuery();
+			String sql = "select * from users u left join money_transfer mt on u.user_id = mt.receiver_account_id where receiver_account_id = ?;";
+			PreparedStatement getMoneyTransferID = conn.prepareStatement(sql);
+			getMoneyTransferID.setInt(1, userId);
+			ResultSet res = getMoneyTransferID.executeQuery();
 			while(res.next()) {
 				User u = new User();
-				u.setUserId(res.getInt("account_id"));
+				u.setUserId(res.getInt("user_id"));
 				u.setBalance(res.getDouble("balance"));
+				u.setTransferID(res.getInt("transfer_id"));
+				u.setTransferState(res.getString("money_transfer_status"));
 				return u;
 			}
 		} catch(SQLException e) {

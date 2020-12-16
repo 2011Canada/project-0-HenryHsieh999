@@ -190,3 +190,39 @@
 2020-12-15 17:11:09 e720 [INFO] [User [userId=0, accountId=0, balance=0.0, receiverAccountID=1, senderAccountID=2, tempMoneyTransfer=24.41, transferID=4, transferState=pending, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null]]
 2020-12-15 17:13:19 e720 [INFO] []
 2020-12-15 17:13:35 e720 [INFO] [User [userId=0, accountId=0, balance=0.0, receiverAccountID=1, senderAccountID=2, tempMoneyTransfer=24.41, transferID=4, transferState=pending, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null]]
+2020-12-15 17:35:39 e720 [INFO] Server has started!
+2020-12-15 17:38:02 e720 [INFO] Server has started!
+2020-12-15 17:40:18 e720 [INFO] Server has started!
+2020-12-15 17:41:34 e720 [INFO] Server has started!
+2020-12-15 17:50:21 e720 [INFO] Server has started!
+2020-12-15 17:52:54 e720 [INFO] Server has started!
+2020-12-15 17:58:21 e720 [INFO] Server has started!
+2020-12-15 18:04:21 e720 [INFO] Server has started!
+2020-12-15 18:05:29 e720 [INFO] Server has started!
+2020-12-15 18:07:33 e720 [INFO] Server has started!
+2020-12-15 18:08:29 e720 [INFO] Server has started!
+2020-12-15 18:20:45 e720 [INFO] Server has started!
+2020-12-15 18:22:58 e720 [INFO] Server has started!
+2020-12-15 18:23:47 e720 [INFO] Server has started!
+2020-12-15 18:27:57 e720 [INFO] Server has started!
+2020-12-15 18:28:40 e720 [INFO] Server has started!
+2020-12-15 18:32:18 e720 [INFO] Server has started!
+2020-12-15 18:33:36 e720 [INFO] Server has started!
+2020-12-15 18:41:01 e720 [INFO] [User [userId=0, accountId=0, balance=0.0, receiverAccountID=1, senderAccountID=2, tempMoneyTransfer=24.41, transferID=4, transferState=pending, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null], User [userId=0, accountId=0, balance=0.0, receiverAccountID=1, senderAccountID=2, tempMoneyTransfer=24.11, transferID=6, transferState=pending, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null], User [userId=0, accountId=0, balance=0.0, receiverAccountID=1, senderAccountID=2, tempMoneyTransfer=24.41, transferID=7, transferState=pending, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null], User [userId=0, accountId=0, balance=0.0, receiverAccountID=1, senderAccountID=2, tempMoneyTransfer=2.32, transferID=8, transferState=pending, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null]]
+2020-12-15 18:46:34 e720 [INFO] Server has started!
+2020-12-15 18:46:46 e720 [INFO] []
+2020-12-15 18:46:52 e720 [INFO] []
+2020-12-15 18:48:03 e720 [INFO] [User [userId=0, accountId=0, balance=0.0, receiverAccountID=1, senderAccountID=2, tempMoneyTransfer=24.41, transferID=4, transferState=pending, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null], User [userId=0, accountId=0, balance=0.0, receiverAccountID=1, senderAccountID=2, tempMoneyTransfer=24.11, transferID=6, transferState=pending, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null], User [userId=0, accountId=0, balance=0.0, receiverAccountID=1, senderAccountID=2, tempMoneyTransfer=24.41, transferID=7, transferState=pending, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null], User [userId=0, accountId=0, balance=0.0, receiverAccountID=1, senderAccountID=2, tempMoneyTransfer=2.32, transferID=8, transferState=pending, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null]]
+2020-12-15 19:01:16 e720 [INFO] [User [userId=0, accountId=0, balance=0.0, receiverAccountID=1, senderAccountID=2, tempMoneyTransfer=24.41, transferID=4, transferState=pending, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null], User [userId=0, accountId=0, balance=0.0, receiverAccountID=1, senderAccountID=2, tempMoneyTransfer=24.11, transferID=6, transferState=pending, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null], User [userId=0, accountId=0, balance=0.0, receiverAccountID=1, senderAccountID=2, tempMoneyTransfer=24.41, transferID=7, transferState=pending, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null], User [userId=0, accountId=0, balance=0.0, receiverAccountID=1, senderAccountID=2, tempMoneyTransfer=2.32, transferID=8, transferState=pending, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null]]
+2020-12-15 19:01:59 e720 [INFO] Server has started!
+2020-12-15 19:02:14 e720 [INFO] []
+2020-12-15 19:02:19 e720 [INFO] []
+2020-12-15 19:05:34 e720 [INFO] Server has started!
+2020-12-15 19:06:36 e720 [INFO] Server has started!
+2020-12-15 19:06:54 e720 [INFO] []
+2020-12-15 19:10:12 e720 [INFO] [User [userId=0, accountId=0, balance=0.0, receiverAccountID=15, senderAccountID=2, tempMoneyTransfer=0.0, transferID=9, transferState=pending, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null], User [userId=0, accountId=0, balance=0.0, receiverAccountID=15, senderAccountID=2, tempMoneyTransfer=30.0, transferID=10, transferState=pending, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null]]
+2020-12-15 19:11:21 e720 [INFO] Server has started!
+2020-12-15 19:11:39 e720 [INFO] [userId=0, accountId=0, balance=0.0, receiverAccountID=15, senderAccountID=2, tempMoneyTransfer=0.0, transferID=9, transferState=pending, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null
+, userId=0, accountId=0, balance=0.0, receiverAccountID=15, senderAccountID=2, tempMoneyTransfer=30.0, transferID=10, transferState=pending, username=null, password=null, firstName=null, lastName=null, tpe=null, userAccountStatus=null
+]
+2020-12-15 19:12:35 e720 [INFO] []

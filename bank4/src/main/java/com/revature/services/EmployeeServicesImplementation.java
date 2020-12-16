@@ -45,5 +45,13 @@ public class EmployeeServicesImplementation implements EmployeeServiceInterface{
 		return ud.findAllBankAccountsUnderSameOwner(id);
 	}
 
+	public User deleteMoneyTransfer(int transferId) {
+		return ud.deleteMoneyTransfer(transferId);
+	}
+
+	public User getMoneyTransferID(int userId) {
+		return ud.getMoneyTransferID(userId);
+	}
+
 
 }

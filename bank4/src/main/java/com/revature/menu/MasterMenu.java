@@ -3,6 +3,8 @@ package com.revature.menu;
 import java.util.List;
 import java.util.Scanner;
 
+import javax.xml.transform.TransformerFactoryConfigurationError;
+
 import com.revature.exceptions.UserNotFoundException;
 import com.revature.models.User;
 import com.revature.repositories.UserDAO;
@@ -24,10 +26,12 @@ public class MasterMenu {
 	static double tempMoneyTransfer = 0;
 	static int receiverAccountID = 0;
 	static int senderAccountID = 0;
+	static int transferIDs = 0;
 	
 	static UserPostgresDAO uPDAO;
 	static User u;
 	static int currentUserId = -10;
+	static int BankAccountId = -10;
 	static int userTempIdForEmployeeManipulation = -10;
 	static int state = 0;
 	static int menuState = 0;
@@ -79,16 +83,17 @@ public class MasterMenu {
 
 	public void employeeMenuOption() throws UserNotFoundException {
 		while(true) {
-			System.out.println("-------------------------------");
-			System.out.println("|                             |");
-			System.out.println("| Employee Options:           |");
-			System.out.println("|  1. RejectBankAccount       |");
-			System.out.println("|  2. AcceptBankAccount       |");
-			System.out.println("|  3. ViewAllCustomerAccounts |");
-			System.out.println("|  4. findUserByUserId        |");
-			System.out.println("|  5. View Log                |");
-			System.out.println("|  6. Logout                  |");
-			System.out.println("-------------------------------");
+			System.out.println("-------------------------------------------");
+			System.out.println("|                                         |");
+			System.out.println("| Employee Options:                       |");
+			System.out.println("|  1. RejectBankAccount                   |");
+			System.out.println("|  2. AcceptBankAccount                   |");
+			System.out.println("|  3. ViewAllCustomerAccounts             |");
+			System.out.println("|  4. findUserByUserId                    |");
+			System.out.println("|  5. View Log                            |");
+			System.out.println("|  6. Logout                              |");
+			System.out.println("|  7. Exit Hard Bank Application          |");
+			System.out.println("-------------------------------------------");
 			state = inInt("Employee options:"); 
 			switch(state){
 				case 1:
@@ -110,6 +115,10 @@ public class MasterMenu {
 					System.out.println("You have logged out!");
 					display();
 					break;
+				case 7:
+					System.out.println("You should really log out before you exit the application!!!");
+					System.exit(0);
+					break;
 				default:
 					System.out.println("Please make a valid selection");
 					break;
@@ -125,8 +134,11 @@ public class MasterMenu {
 			System.out.println("|  2. Deposit                             |");
 			System.out.println("|  3. View Account Balance                |");
 			System.out.println("|  4. Accept Money Transfer               |");
-			System.out.println("|  5. Transfer Money to another account   |");			
-			System.out.println("|  6. Logout                              |");
+			System.out.println("|  5. See All Incoming Money Transfers    |");
+			System.out.println("|  6. See All Outgoing Money Transfers    |");
+			System.out.println("|  7. Transfer Money to another account   |");			
+			System.out.println("|  8. Logout                              |");
+			System.out.println("|  9. Exit Hard Bank Application          |");
 			System.out.println("-------------------------------------------");
 			state = inInt("Customer options:");  
 			switch(state){
@@ -143,11 +155,21 @@ public class MasterMenu {
 					acceptMoneyTransfer();
 					break;
 				case 5:
-					transferMoneytoAnotherAccount();
+					seeAllIncomingMoneyTransfers();
 					break;
 				case 6:
+					seeAllOutGoingMoneyTransfers();
+					break;
+				case 7:
+					transferMoneytoAnotherAccount();
+					break;
+				case 8:
 					System.out.println("You have logged out!\n");
 					display();
+					break;
+				case 9:
+					System.out.println("You should really log out before you exit the application!!!");
+					System.exit(0);
 					break;
 				default:
 					System.out.println("Please make a valid selection\n");
@@ -155,9 +177,10 @@ public class MasterMenu {
 				}
 		}
 	}
-	
 	private void withdraw() throws UserNotFoundException {
 		System.out.println("Option 1 selected\n");
+		BankAccountId = ud.findAccountId(currentUserId).getAccountId();
+		System.out.println("Current Bank Account Id is: \n" + BankAccountId);
 		System.out.println("Please enter the amount of money you would like to withdraw.\n");
 		money = Double.parseDouble(inString());
 		System.out.println("You have chosen to withdraw: " + money);
@@ -178,10 +201,10 @@ public class MasterMenu {
 			customerMenuOption();
 		}
 	}
-
-
 	private void deposit() throws UserNotFoundException {
 		System.out.println("Option 2 selected\n");
+		BankAccountId = ud.findAccountId(currentUserId).getAccountId();
+		System.out.println("Current Bank Account Id is: \n" + BankAccountId);
 		System.out.println("Please enter the amount of money you would like to deposit.\n");
 		money = Double.parseDouble(inString());
 		System.out.println("You have chosen to deposit: " + money);
@@ -201,27 +224,55 @@ public class MasterMenu {
 	}
 	private void viewAccountBalance() throws UserNotFoundException {
 		System.out.println("Current user id is : \n" + currentUserId);
-		System.out.println("Option 3 selected");
+		BankAccountId = ud.findAccountId(currentUserId).getAccountId();
+		System.out.println("Current Bank Account Id is: \n" + BankAccountId);
+		System.out.println("Option 3 selected!");
 		totalBalance = csi.viewBalance(currentUserId).getBalance();
 		System.out.println("Your bank account balance is: $" + totalBalance);
 		customerMenuOption();
 	}
-	
-	private void acceptMoneyTransfer() {
-		
-		
+	private void acceptMoneyTransfer() throws UserNotFoundException {
+		System.out.println("Current user id is : \n" + currentUserId);
+		System.out.println("Option 4 selected!");
+		currentUserId = csi.findUserIdByUsername(username).getUserId();
+		transferIDs = Integer.parseInt(inString());
+		System.out.println(transferIDs);
+		csi.acceptMoneyTransferFromAnotherUser(transferIDs);
+		System.out.println("You have finished accepting the money!");
+		totalBalance = csi.viewBalance(currentUserId).getBalance();
+		System.out.println("You now have a balance of: $" + totalBalance);
+		customerMenuOption();
 	}
 
-
+	private void seeAllIncomingMoneyTransfers() throws UserNotFoundException {
+		System.out.println("Current user id is : \n" + currentUserId);
+		BankAccountId = ud.findAccountId(currentUserId).getAccountId();
+		System.out.println("Current Bank Account Id is: \n" + BankAccountId);
+		System.out.println("Option 5 selected!");
+		System.out.println(csi.viewAllIncomingMoneyTranfers(BankAccountId));
+		customerMenuOption();	
+	}
+	private void seeAllOutGoingMoneyTransfers() throws UserNotFoundException {
+		System.out.println("Current user id is : \n" + currentUserId);
+		BankAccountId = ud.findAccountId(currentUserId).getAccountId();
+		System.out.println("Current Bank Account Id is: \n" + BankAccountId);
+		System.out.println("Option 6 selected!");
+		currentUserId = csi.findUserIdByUsername(username).getUserId();
+		System.out.println(csi.viewAllOutgoingMoneyTransfers(BankAccountId));
+		customerMenuOption();
+		
+	}
 	private void transferMoneytoAnotherAccount() throws UserNotFoundException {
 		System.out.println("Current user id is : \n" + currentUserId);
-		System.out.println("Option 5 selected!");
+		BankAccountId = ud.findAccountId(currentUserId).getAccountId();
+		System.out.println("Current Bank Account Id is: \n" + BankAccountId);
+		System.out.println("Option 7 selected!");
 		System.out.println("Please enter the Receiver's bank account ID!");
 		receiverAccountID = Integer.parseInt(inString());
 		System.out.println("Please enter the Sender's bank account ID");
 		senderAccountID = Integer.parseInt(inString());
 		System.out.println("Please enter the balance you want to send: $");
-		tempMoneyTransfer = Integer.parseInt(inString());
+		tempMoneyTransfer = Double.parseDouble(inString());
 		//check for negative amount entered
 		currentBalance = csi.viewBalance(currentUserId).getBalance();
 		System.out.println("You currently have: $" + currentBalance);
@@ -234,13 +285,15 @@ public class MasterMenu {
 			csi.transferMoneyToAnotherAccount(u);
 		}else if((currentBalance - tempMoneyTransfer) > 0) {
 			System.out.println("You're transfer of: $" + tempMoneyTransfer + " is now pending!");
+			User u2 = new User(receiverAccountID, tempMoneyTransfer, senderAccountID);
+			csi.transferMoneyToAnotherAccount(u2);
 			customerMenuOption();
 		}
-		
 		customerMenuOption();
-		
 	}
+	
 
+	
 	private void rejectBankAccount() throws UserNotFoundException {
 		System.out.println("Option 1 selected");
 		System.out.println("Please enter the Bank Account id you want to Reject.\n");
@@ -307,6 +360,8 @@ public class MasterMenu {
 		password = inString();
 		currentUserId = ud.findUserIdByUsername(username).getUserId();
 		System.out.println("Current user id is : \n" + currentUserId);
+		BankAccountId = ud.findAccountId(currentUserId).getAccountId();
+		System.out.println("Current Bank Account Id is: \n" + BankAccountId);
 		try {
 			csi.login(username, password);
 			if(csi.chkUserAccountStatus(currentUserId).getUserAccountStatus().equals("inactive")) {

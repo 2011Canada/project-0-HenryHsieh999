@@ -13,4 +13,7 @@ public interface EmployeeServiceInterface {
 	public List<User> findAllCustomer();
 	public List<User> findAllLockedUserAccounts();
 	public List<User> findAllBankAccountsUnderSameOwner(int id);
+
+	public User deleteMoneyTransfer(int transferId);
+	public User getMoneyTransferID(int userId);
 }

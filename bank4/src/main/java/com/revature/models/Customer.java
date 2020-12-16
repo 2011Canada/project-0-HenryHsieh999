@@ -17,5 +17,8 @@ public class Customer extends User{
 	public Customer(int receiver_account_id, double tempMoneyTransfer, int sender_account_id, String money_transfer_status, int transfer_id) {
 		super(receiver_account_id, tempMoneyTransfer, sender_account_id, money_transfer_status, transfer_id);
 	}
+	public Customer(int receiverAccountId, double tempMoneyTransfer, int senderAccountId , String moneyTransferStatus, int transferId , int accountId) {
+		super(receiverAccountId, tempMoneyTransfer,senderAccountId,moneyTransferStatus,transferId,accountId);
+	}
 	
 }

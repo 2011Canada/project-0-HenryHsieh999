@@ -1,5 +1,7 @@
 package com.revature.services;
 
+import java.util.List;
+
 import com.revature.exceptions.UserNotFoundException;
 import com.revature.launcher.HardBankLauncher;
 import com.revature.models.User;
@@ -56,11 +58,22 @@ public class CustomerServicesImplementation implements CustomerServiceInterface{
 	public User chkUserAccountType(int id) {
 		return ud.checkUserAccountType(id);
 	}
-//	public User acceptMoneyTransferFromAnotherUser(User u) {
-//	return ud.moneyTransferToAnotherAccount(u);
-//  }
+	public User acceptMoneyTransferFromAnotherUser(int transferId) {
+	return ud.acceptMoneyTransfer(transferId);
+	}
 	public User transferMoneyToAnotherAccount(User u) {
 		return ud.moneyTransferToAnotherAccount(u);
+	}
+
+	public User getMoneyTransferID(int userId) {
+		return ud.getMoneyTransferID(userId);
+	}
+	public List<User> viewAllIncomingMoneyTranfers(int userId) {
+		return ud.viewAllIncomingMoneyTranfers(userId);
+	}
+
+	public List<User> viewAllOutgoingMoneyTransfers(int userId) {
+		return ud.viewAllOutgoingMoneyTransfers(userId);
 	}
 
 
